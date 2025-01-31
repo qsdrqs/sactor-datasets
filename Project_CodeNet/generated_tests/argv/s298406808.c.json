@@ -1,0 +1,42 @@
+[
+    {
+        "input": "10 20 10",
+        "output": "delicious"
+    },
+    {
+        "input": "10 15 5",
+        "output": "delicious"
+    },
+    {
+        "input": "10 10 0",
+        "output": "delicious"
+    },
+    {
+        "input": "10 5 15",
+        "output": "safe"
+    },
+    {
+        "input": "10 0 10",
+        "output": "safe"
+    },
+    {
+        "input": "10 10 20",
+        "output": "safe"
+    },
+    {
+        "input": "10 5 5",
+        "output": "safe"
+    },
+    {
+        "input": "10 5 6",
+        "output": "safe"
+    },
+    {
+        "input": "10 5 16",
+        "output": "dangerous"
+    },
+    {
+        "input": "10 5 14",
+        "output": "safe"
+    }
+]

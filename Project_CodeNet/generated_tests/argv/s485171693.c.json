@@ -1,0 +1,42 @@
+[
+    {
+        "input": "world",
+        "output": "dlrow\ndlrow"
+    },
+    {
+        "input": "abcdefghijklmnopqrstu",
+        "output": "utsrqponmlkjihgfedcba\nutsrqponmlkjihgfedcba"
+    },
+    {
+        "input": "12345",
+        "output": "54321\n54321"
+    },
+    {
+        "input": "A1B2C3D4E5",
+        "output": "5E4D3C2B1A\n5E4D3C2B1A"
+    },
+    {
+        "input": "abcdefghijklmnopqrst",
+        "output": "tsrqponmlkjihgfedcba\ntsrqponmlkjihgfedcba"
+    },
+    {
+        "input": "!@#$%^&*()",
+        "output": ")(*&^%$#@!\n)(*&^%$#@!"
+    },
+    {
+        "input": "zyxwvutsrqponmlkjihgfedcba",
+        "output": "defghijklmnopqrstuvwxyz\ndefghijklmnopqrstuvwxyz"
+    },
+    {
+        "input": "1234567890",
+        "output": "0987654321\n0987654321"
+    },
+    {
+        "input": "hello",
+        "output": "olleh\nolleh"
+    },
+    {
+        "input": "a",
+        "output": "a\na"
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "input": "10\n1 2 3 4 5 6 7 8 9 10\n5\n11\n12\n13\n14\n15",
+        "output": "yes\nyes\nyes\nyes\nyes"
+    },
+    {
+        "input": "6\n2 4 6 8 10 12\n3\n3\n6\n9",
+        "output": "no\nyes\nno"
+    },
+    {
+        "input": "3\n1 2 3\n2\n4\n5",
+        "output": "yes\nyes"
+    },
+    {
+        "input": "3\n100 200 300\n3\n100\n200\n300",
+        "output": "yes\nyes\nyes"
+    },
+    {
+        "input": "8\n5 10 15 20 25 30 35 40\n4\n10\n20\n30\n40",
+        "output": "yes\nyes\nyes\nyes"
+    },
+    {
+        "input": "2\n15 30\n2\n15\n45",
+        "output": "yes\nyes"
+    },
+    {
+        "input": "5\n10 20 30 40 50\n3\n10\n25\n50",
+        "output": "yes\nno\nyes"
+    },
+    {
+        "input": "7\n1 2 3 4 5 6 7\n5\n1\n7\n14\n21\n28",
+        "output": "yes\nyes\nyes\nyes\nyes"
+    },
+    {
+        "input": "1\n7\n1\n7",
+        "output": "yes"
+    },
+    {
+        "input": "4\n1 3 5 7\n4\n2\n4\n6\n8",
+        "output": "no\nyes\nyes\nyes"
+    }
+]

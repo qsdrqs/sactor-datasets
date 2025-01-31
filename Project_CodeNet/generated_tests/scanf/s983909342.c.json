@@ -1,0 +1,42 @@
+[
+    {
+        "input": "racecar",
+        "output": ""
+    },
+    {
+        "input": "abababab",
+        "output": "4"
+    },
+    {
+        "input": "abba",
+        "output": "2"
+    },
+    {
+        "input": "xyzzyx",
+        "output": ""
+    },
+    {
+        "input": "123454321",
+        "output": ""
+    },
+    {
+        "input": "abcba",
+        "output": ""
+    },
+    {
+        "input": "aabbaa",
+        "output": ""
+    },
+    {
+        "input": "abcddcba",
+        "output": ""
+    },
+    {
+        "input": "level",
+        "output": ""
+    },
+    {
+        "input": "aaaa",
+        "output": "2"
+    }
+]

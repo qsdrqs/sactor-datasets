@@ -1,0 +1,42 @@
+[
+    {
+        "input": "1000",
+        "output": ""
+    },
+    {
+        "input": "1111",
+        "output": ""
+    },
+    {
+        "input": "9999",
+        "output": ""
+    },
+    {
+        "input": "2222",
+        "output": ""
+    },
+    {
+        "input": "3333",
+        "output": ""
+    },
+    {
+        "input": "0001",
+        "output": ""
+    },
+    {
+        "input": "9876",
+        "output": ""
+    },
+    {
+        "input": "5678",
+        "output": ""
+    },
+    {
+        "input": "4444",
+        "output": ""
+    },
+    {
+        "input": "1234",
+        "output": ""
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "input": "1 1",
+        "output": "2"
+    },
+    {
+        "input": "20 20",
+        "output": "40"
+    },
+    {
+        "input": "50 51",
+        "output": "101"
+    },
+    {
+        "input": "100 99",
+        "output": "199"
+    },
+    {
+        "input": "2 3",
+        "output": "5"
+    },
+    {
+        "input": "10 8",
+        "output": "19"
+    },
+    {
+        "input": "5 5",
+        "output": "10"
+    },
+    {
+        "input": "0 0",
+        "output": "0"
+    },
+    {
+        "input": "15 10",
+        "output": "29"
+    },
+    {
+        "input": "4 7",
+        "output": "13"
+    }
+]

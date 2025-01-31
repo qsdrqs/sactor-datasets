@@ -1,0 +1,42 @@
+[
+    {
+        "input": "23\n0",
+        "output": "17 19"
+    },
+    {
+        "input": "2\n0",
+        "output": "0 3"
+    },
+    {
+        "input": "4\n0",
+        "output": "1 5"
+    },
+    {
+        "input": "5\n0",
+        "output": "3 5"
+    },
+    {
+        "input": "17\n0",
+        "output": "11 13"
+    },
+    {
+        "input": "3\n0",
+        "output": "1 4"
+    },
+    {
+        "input": "13\n0",
+        "output": "11 13"
+    },
+    {
+        "input": "7\n0",
+        "output": "5 7"
+    },
+    {
+        "input": "11\n0",
+        "output": "5 7"
+    },
+    {
+        "input": "19\n0",
+        "output": "17 19"
+    }
+]

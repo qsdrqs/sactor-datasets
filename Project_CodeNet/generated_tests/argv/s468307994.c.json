@@ -1,0 +1,42 @@
+[
+    {
+        "input": "12345",
+        "output": "no"
+    },
+    {
+        "input": "world",
+        "output": "no"
+    },
+    {
+        "input": "xyzxyz",
+        "output": "no"
+    },
+    {
+        "input": "no duplicates",
+        "output": "no"
+    },
+    {
+        "input": "hello",
+        "output": "no"
+    },
+    {
+        "input": "abcdefghijklmnopqrstuvwxyz",
+        "output": "no"
+    },
+    {
+        "input": "aabbcc",
+        "output": "no"
+    },
+    {
+        "input": "unique",
+        "output": "no"
+    },
+    {
+        "input": "abcde",
+        "output": "no"
+    },
+    {
+        "input": "abcdefa",
+        "output": "no"
+    }
+]

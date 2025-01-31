@@ -1,0 +1,42 @@
+[
+    {
+        "input": "123456789012345678901",
+        "output": "123456789012345678901\n123456789012345678901\u0000109876543210987654321"
+    },
+    {
+        "input": "a",
+        "output": "a\na\u0000a"
+    },
+    {
+        "input": "hello",
+        "output": "hello\nhello\u0000olleh"
+    },
+    {
+        "input": "ThisIsALongString",
+        "output": "ThisIsALongString\nThisIsALongString\u0000gnirtSgnoLAsIsihT"
+    },
+    {
+        "input": "world",
+        "output": "world\nworld\u0000dlrow"
+    },
+    {
+        "input": "abcdefghijklmnopqrst",
+        "output": "abcdefghijklmnopqrst\nabcdefghijklmnopqrst\u0000tsrqponmlkjihgfedcba"
+    },
+    {
+        "input": "12345",
+        "output": "12345\n12345\u000054321"
+    },
+    {
+        "input": "!@#$%^&*()",
+        "output": "!@#$%^&*()\n!@#$%^&*()\u0000)(*&^%$#@!"
+    },
+    {
+        "input": "A",
+        "output": "A\nA\u0000A"
+    },
+    {
+        "input": "123",
+        "output": "123\n123\u0000321"
+    }
+]

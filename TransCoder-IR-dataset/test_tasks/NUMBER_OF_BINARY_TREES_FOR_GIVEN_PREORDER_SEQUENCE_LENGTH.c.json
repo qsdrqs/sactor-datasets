@@ -1,0 +1,14 @@
+[
+    {
+        "command": "%t 2"
+    },
+    {
+        "command": "%t 3"
+    },
+    {
+        "command": "%t 4"
+    },
+    {
+        "command": "%t 5"
+    }
+]

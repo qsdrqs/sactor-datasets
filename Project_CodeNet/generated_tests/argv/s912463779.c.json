@@ -1,0 +1,42 @@
+[
+    {
+        "input": "10 20 30",
+        "output": "Yes"
+    },
+    {
+        "input": "-5 5 0",
+        "output": "Yes"
+    },
+    {
+        "input": "100 200 300",
+        "output": "Yes"
+    },
+    {
+        "input": "7 3 10",
+        "output": "Yes"
+    },
+    {
+        "input": "-1 -2 -3",
+        "output": "Yes"
+    },
+    {
+        "input": "-10 -20 -30",
+        "output": "Yes"
+    },
+    {
+        "input": "0 0 0",
+        "output": "Yes"
+    },
+    {
+        "input": "1 2 3",
+        "output": "Yes"
+    },
+    {
+        "input": "1 1 2",
+        "output": "Yes"
+    },
+    {
+        "input": "5 5 10",
+        "output": "Yes"
+    }
+]

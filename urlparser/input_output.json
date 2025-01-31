@@ -1,0 +1,42 @@
+[
+    {
+        "input": 1,
+        "output": ""
+    },
+    {
+        "input": 2,
+        "output": "#url =>\n.protocol: \"git\"\n.host: \"github.com\"\n.userinfo: \"git\"\n.host: \"github.com\"\n.port: (NULL)\n.path: \"jwerle/url.h.git\"\n.fragment: (NULL)"
+    },
+    {
+        "input": 3,
+        "output": "#url =>\n.protocol: \"http\"\n.host: \"subdomain.host.com\"\n.userinfo: \"user:pass\"\n.host: \"subdomain.host.com\"\n.port: \"8080\"\n.path: \"/p/\u00e5/t/h\"\n.query[0]: \"qu\u00ebry\" -> \"strin\u011f\"\n.query[1]: \"foo\" -> \"bar=yuk\"\n.query[2]: \"key#&=\" -> \"%\"\n.query[3]: \"lol\" -> \"\"\n.fragment: \"h\u00e6sh\""
+    },
+    {
+        "input": 4,
+        "output": "#url =>\n.protocol: \"sftp\"\n.host: \"example.com\"\n.userinfo: \"user\"\n.host: \"example.com\"\n.port: \"2222\"\n.path: \"/path/to/file.txt\"\n.fragment: (NULL)"
+    },
+    {
+        "input": 5,
+        "output": "#url =>\n.protocol: \"https\"\n.host: \"api.example.com\"\n.userinfo: (NULL)\n.host: \"api.example.com\"\n.port: (NULL)\n.path: \"/v1/search\"\n.query[0]: \"q\" -> \"test\"\n.query[1]: \"filter\" -> \"age\"\n.query[2]: \"status\" -> \"active\"\n.fragment: (NULL)"
+    },
+    {
+        "input": 6,
+        "output": "#url =>\n.protocol: \"http\"\n.host: \"example.com\"\n.userinfo: (NULL)\n.host: \"example.com\"\n.port: (NULL)\n.path: \"/test\"\n.fragment: (NULL)"
+    },
+    {
+        "input": 7,
+        "output": "#url =>\n.protocol: \"ftp\"\n.host: \"2001:db8::1\"\n.userinfo: \"user:pass\"\n.host: \"2001:db8::1\"\n.port: \"21\"\n.path: \"/path/file.txt\"\n.fragment: (NULL)"
+    },
+    {
+        "input": 8,
+        "output": "#url =>\n.protocol: \"ws\"\n.host: \"example.com\"\n.userinfo: (NULL)\n.host: \"example.com\"\n.port: \"8080\"\n.path: \"/socket\"\n.query[0]: \"token\" -> \"abc123\"\n.query[1]: \"version\" -> \"1.0\"\n.fragment: (NULL)"
+    },
+    {
+        "input": 9,
+        "output": "#url =>\n.protocol: \"https\"\n.host: \"example.de\"\n.userinfo: (NULL)\n.host: \"example.de\"\n.port: (NULL)\n.path: \"/path/index.html\"\n.query[0]: \"lang\" -> \"de\"\n.fragment: (NULL)"
+    },
+    {
+        "input": 10,
+        "output": "#url =>\n.protocol: \"https\"\n.host: \"example.com\"\n.userinfo: \"john:password\"\n.host: \"example.com\"\n.port: \"8443\"\n.path: \"/path/resource\"\n.query[0]: \"key1\" -> \"value1\"\n.query[1]: \"key2\" -> \"value2\"\n.query[2]: \"empty\" -> \"\"\n.fragment: (NULL)"
+    }
+]

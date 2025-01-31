@@ -1,0 +1,42 @@
+[
+    {
+        "input": "abcdefghijklmnopqrstuvwxyzb",
+        "output": ""
+    },
+    {
+        "input": "abcdefghijklmnopqrstuvwxz",
+        "output": "abcdefghijklmnopqrstuvwxzy"
+    },
+    {
+        "input": "zyxwvutsrqponmlkjihgfedcba",
+        "output": "-1"
+    },
+    {
+        "input": "abcdefghijklmnopqrstuvwxyza",
+        "output": ""
+    },
+    {
+        "input": "a",
+        "output": "ab"
+    },
+    {
+        "input": "abcdefghijklmnopqrstuvwxy",
+        "output": "abcdefghijklmnopqrstuvwxyz"
+    },
+    {
+        "input": "abcdefghijklmnopqrstuvwxyy",
+        "output": "abcdefghijklmnopqrstuvwy"
+    },
+    {
+        "input": "abc",
+        "output": "abcd"
+    },
+    {
+        "input": "abcdefghijklmnopqrstuvwxyz",
+        "output": "abcdefghijklmnopqrstuvwxz"
+    },
+    {
+        "input": "abcdefghijklmnopqrstuvwxyzz",
+        "output": ""
+    }
+]

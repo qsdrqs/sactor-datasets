@@ -1,0 +1,42 @@
+[
+    {
+        "input": "0 1",
+        "output": "95"
+    },
+    {
+        "input": "1 2",
+        "output": "97"
+    },
+    {
+        "input": "@ #",
+        "output": "127"
+    },
+    {
+        "input": "a b",
+        "output": "193"
+    },
+    {
+        "input": "Z Y",
+        "output": "179"
+    },
+    {
+        "input": "A A",
+        "output": "129"
+    },
+    {
+        "input": "Z A",
+        "output": "179"
+    },
+    {
+        "input": "A B",
+        "output": "129"
+    },
+    {
+        "input": "! ?",
+        "output": "93"
+    },
+    {
+        "input": "9 8",
+        "output": "113"
+    }
+]

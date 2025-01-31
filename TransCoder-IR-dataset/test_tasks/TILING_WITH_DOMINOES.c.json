@@ -1,0 +1,20 @@
+[
+    {
+        "command": "%t 0"
+    },
+    {
+        "command": "%t 1"
+    },
+    {
+        "command": "%t 2"
+    },
+    {
+        "command": "%t 4"
+    },
+    {
+        "command": "%t 6"
+    },
+    {
+        "command": "%t 9"
+    }
+]

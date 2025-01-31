@@ -1,0 +1,42 @@
+[
+    {
+        "input": "3\ninsert hello\nfind hello\nfind world",
+        "output": "yes\nno"
+    },
+    {
+        "input": "3\ninsert test\nfind test\nfind test",
+        "output": "yes\nyes"
+    },
+    {
+        "input": "1\nfind nothing",
+        "output": "no"
+    },
+    {
+        "input": "4\ninsert 123\nfind 123\ninsert abc\nfind abc",
+        "output": "yes\nyes"
+    },
+    {
+        "input": "7\ninsert cat\ninsert dog\nfind cat\nfind dog\nfind bird\ninsert bird\nfind bird",
+        "output": "yes\nyes\nno\nyes"
+    },
+    {
+        "input": "5\ninsert apple\nfind apple\ninsert banana\nfind banana\nfind orange",
+        "output": "yes\nyes\nno"
+    },
+    {
+        "input": "8\ninsert one\ninsert two\ninsert three\nfind one\nfind two\nfind three\nfind four\ninsert four",
+        "output": "yes\nyes\nyes\nno"
+    },
+    {
+        "input": "6\ninsert xyz\nfind xyz\ninsert xyz\nfind xyz\nfind abc\ninsert abc",
+        "output": "yes\nyes\nno"
+    },
+    {
+        "input": "2\ninsert a\nfind a",
+        "output": "yes"
+    },
+    {
+        "input": "10\ninsert a\ninsert b\ninsert c\ninsert d\ninsert e\nfind a\nfind b\nfind c\nfind d\nfind e",
+        "output": "yes\nyes\nyes\nyes\nyes"
+    }
+]

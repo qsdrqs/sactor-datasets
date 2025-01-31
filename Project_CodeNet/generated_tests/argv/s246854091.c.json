@@ -1,0 +1,42 @@
+[
+    {
+        "input": "2",
+        "output": "0.500000\u00a5n"
+    },
+    {
+        "input": "10",
+        "output": "0.500000\u00a5n"
+    },
+    {
+        "input": "4",
+        "output": "0.500000\u00a5n"
+    },
+    {
+        "input": "6",
+        "output": "0.500000\u00a5n"
+    },
+    {
+        "input": "1",
+        "output": "1"
+    },
+    {
+        "input": "8",
+        "output": "0.500000\u00a5n"
+    },
+    {
+        "input": "7",
+        "output": "0.571429\u00a5n"
+    },
+    {
+        "input": "3",
+        "output": "0.666667\u00a5n"
+    },
+    {
+        "input": "9",
+        "output": "0.555556\u00a5n"
+    },
+    {
+        "input": "5",
+        "output": "0.600000\u00a5n"
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "input": "4 1\nACAC\n1 4",
+        "output": "2"
+    },
+    {
+        "input": "10 3\nAACACACACA\n1 10\n2 9\n3 8",
+        "output": "4\n4\n2"
+    },
+    {
+        "input": "9 2\nACACACACA\n1 9\n3 7",
+        "output": "4\n2"
+    },
+    {
+        "input": "3 2\nAAA\n1 3\n2 3",
+        "output": "0\n0"
+    },
+    {
+        "input": "7 1\nACACACA\n1 7",
+        "output": "3"
+    },
+    {
+        "input": "6 3\nACACAC\n1 6\n2 5\n3 4",
+        "output": "3\n1\n1"
+    },
+    {
+        "input": "1 1\nA\n1 1",
+        "output": "0"
+    },
+    {
+        "input": "5 2\nACACA\n1 5\n2 4",
+        "output": "2\n1"
+    },
+    {
+        "input": "12 3\nACACACACACAC\n1 12\n2 11\n3 10",
+        "output": "6\n4\n4"
+    },
+    {
+        "input": "8 2\nACACACAC\n1 8\n2 7",
+        "output": "4\n2"
+    }
+]

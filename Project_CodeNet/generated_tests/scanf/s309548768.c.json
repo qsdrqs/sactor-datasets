@@ -1,0 +1,42 @@
+[
+    {
+        "input": "2\ninsert 200\nprint",
+        "output": "200\n200"
+    },
+    {
+        "input": "3\ninsert 12\ninsert 6\nprint",
+        "output": "6 12\n12 6"
+    },
+    {
+        "input": "1\nprint",
+        "output": "\n"
+    },
+    {
+        "input": "3\ninsert 15\nprint\ninsert 25",
+        "output": "15\n15"
+    },
+    {
+        "input": "10\ninsert 55\ninsert 33\ninsert 77\ninsert 22\ninsert 44\ninsert 66\ninsert 88\ninsert 11\ninsert 99\nprint",
+        "output": "11 22 33 44 55 66 77 88 99\n55 33 22 11 44 77 66 88 99"
+    },
+    {
+        "input": "6\ninsert 100\ninsert 50\ninsert 150\ninsert 25\ninsert 75\nprint",
+        "output": "25 50 75 100 150\n100 50 25 75 150"
+    },
+    {
+        "input": "8\ninsert 60\ninsert 40\ninsert 80\ninsert 20\ninsert 50\ninsert 70\ninsert 90\nprint",
+        "output": "20 40 50 60 70 80 90\n60 40 20 50 80 70 90"
+    },
+    {
+        "input": "7\ninsert 30\ninsert 20\ninsert 40\ninsert 10\ninsert 25\ninsert 35\nprint",
+        "output": "10 20 25 30 35 40\n30 20 10 25 40 35"
+    },
+    {
+        "input": "5\ninsert 10\ninsert 20\ninsert 5\nprint\nprint",
+        "output": "5 10 20\n10 5 20\n5 10 20\n10 5 20"
+    },
+    {
+        "input": "4\ninsert 50\ninsert 30\ninsert 70\nprint",
+        "output": "30 50 70\n50 30 70"
+    }
+]

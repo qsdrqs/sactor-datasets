@@ -1,0 +1,42 @@
+[
+    {
+        "input": "2 5\nshort 10\nlong 20",
+        "output": "short 15\nlong 30"
+    },
+    {
+        "input": "2 10\nalpha 25\nbeta 15",
+        "output": "beta 35\nalpha 40"
+    },
+    {
+        "input": "4 30\nx 50\ny 30\nz 40\nw 20",
+        "output": "y 60\nw 110\nx 130\nz 140"
+    },
+    {
+        "input": "4 40\njob1 80\njob2 40\njob3 120\njob4 160",
+        "output": "job2 80\njob1 200\njob3 320\njob4 400"
+    },
+    {
+        "input": "7 25\ntaskA 100\ntaskB 50\ntaskC 75\ntaskD 25\ntaskE 150\ntaskF 200\ntaskG 10",
+        "output": "taskD 100\ntaskG 160\ntaskB 210\ntaskC 335\ntaskA 410\ntaskE 535\ntaskF 610"
+    },
+    {
+        "input": "5 50\na 120\nb 30\nc 60\nd 90\ne 10",
+        "output": "b 80\ne 190\nc 250\nd 290\na 310"
+    },
+    {
+        "input": "6 60\none 120\ntwo 60\nthree 180\nfour 240\nfive 30\nsix 90",
+        "output": "two 120\nfive 270\none 390\nsix 540\nthree 600\nfour 720"
+    },
+    {
+        "input": "3 15\nA 45\nB 30\nC 60",
+        "output": "B 75\nA 105\nC 135"
+    },
+    {
+        "input": "1 20\ntask1 100",
+        "output": "task1 100"
+    },
+    {
+        "input": "3 100\np1 150\np2 80\np3 200",
+        "output": "p2 180\np1 330\np3 430"
+    }
+]

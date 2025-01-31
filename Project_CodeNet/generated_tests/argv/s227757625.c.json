@@ -1,0 +1,42 @@
+[
+    {
+        "input": "9 10",
+        "output": "Even"
+    },
+    {
+        "input": "7 8",
+        "output": "Even"
+    },
+    {
+        "input": "2147483647 1",
+        "output": "Odd"
+    },
+    {
+        "input": "1 2",
+        "output": "Even"
+    },
+    {
+        "input": "3 4",
+        "output": "Even"
+    },
+    {
+        "input": "-2147483648 1",
+        "output": "Even"
+    },
+    {
+        "input": "0 0",
+        "output": "Even"
+    },
+    {
+        "input": "-1 2",
+        "output": "Even"
+    },
+    {
+        "input": "-3 -4",
+        "output": "Even"
+    },
+    {
+        "input": "5 6",
+        "output": "Even"
+    }
+]

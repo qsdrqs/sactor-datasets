@@ -1,0 +1,42 @@
+[
+    {
+        "input": "7\nC7 H7 S7 D7 C8 H8 S8",
+        "output": "C7 H7 S7 D7 C8 H8 S8\nStable\nC7 H7 S7 D7 C8 H8 S8\nStable"
+    },
+    {
+        "input": "9\nD9 C9 S9 H9 D8 C8 S8 H8 D7",
+        "output": "D7 D8 C8 S8 H8 D9 C9 S9 H9\nStable\nD7 D8 C8 S8 H8 S9 H9 C9 D9\nNot Stable"
+    },
+    {
+        "input": "1\nH1",
+        "output": "H1\nStable\nH1\nStable"
+    },
+    {
+        "input": "3\nS3 H2 D1",
+        "output": "D1 H2 S3\nStable\nD1 H2 S3\nStable"
+    },
+    {
+        "input": "8\nH3 H2 H1 D3 D2 D1 C3 C2",
+        "output": "H1 D1 H2 D2 C2 H3 D3 C3\nStable\nH1 D1 D2 H2 C2 D3 C3 H3\nNot Stable"
+    },
+    {
+        "input": "5\nH1 C1 S1 D1 H2",
+        "output": "H1 C1 S1 D1 H2\nStable\nH1 C1 S1 D1 H2\nStable"
+    },
+    {
+        "input": "4\nS9 S8 S7 S6",
+        "output": "S6 S7 S8 S9\nStable\nS6 S7 S8 S9\nStable"
+    },
+    {
+        "input": "2\nD5 H5",
+        "output": "D5 H5\nStable\nD5 H5\nStable"
+    },
+    {
+        "input": "6\nC1 C2 C3 C4 C5 C6",
+        "output": "C1 C2 C3 C4 C5 C6\nStable\nC1 C2 C3 C4 C5 C6\nStable"
+    },
+    {
+        "input": "10\nD3 H4 C9 S4 D2 C3 S2 H1 D1 C1",
+        "output": "H1 D1 C1 D2 S2 D3 C3 H4 S4 C9\nStable\nH1 D1 C1 D2 S2 C3 D3 S4 H4 C9\nNot Stable"
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "input": "12345",
+        "output": "54321"
+    },
+    {
+        "input": "world",
+        "output": "dlrow"
+    },
+    {
+        "input": "123456789012345678901",
+        "output": "109876543210987654321"
+    },
+    {
+        "input": "ThisIsALongString",
+        "output": "gnirtSgnoLAsIsihT"
+    },
+    {
+        "input": "abcdefghijklmnopqrstu",
+        "output": "utsrqponmlkjihgfedcba"
+    },
+    {
+        "input": "abcdefghijklmnopqrst",
+        "output": "tsrqponmlkjihgfedcba"
+    },
+    {
+        "input": "hello",
+        "output": "olleh"
+    },
+    {
+        "input": "!@#$%^&*()",
+        "output": ")(*&^%$#@!"
+    },
+    {
+        "input": "A",
+        "output": "A"
+    },
+    {
+        "input": "CProgramming",
+        "output": "gnimmargorPC"
+    }
+]

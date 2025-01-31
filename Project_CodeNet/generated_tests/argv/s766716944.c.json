@@ -1,0 +1,42 @@
+[
+    {
+        "input": "./program M mango N",
+        "output": ""
+    },
+    {
+        "input": "./program P pineapple Q",
+        "output": ""
+    },
+    {
+        "input": "./program C cucumber D",
+        "output": ""
+    },
+    {
+        "input": "./program L lemon M",
+        "output": ""
+    },
+    {
+        "input": "./program G grape H",
+        "output": ""
+    },
+    {
+        "input": "./program X apple Y",
+        "output": ""
+    },
+    {
+        "input": "./program T tomato U",
+        "output": ""
+    },
+    {
+        "input": "./program S strawberry T",
+        "output": ""
+    },
+    {
+        "input": "./program Z zebra X",
+        "output": ""
+    },
+    {
+        "input": "./program A banana B",
+        "output": ""
+    }
+]

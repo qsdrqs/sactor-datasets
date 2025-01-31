@@ -1,0 +1,42 @@
+[
+    {
+        "input": "1",
+        "output": "0"
+    },
+    {
+        "input": "4",
+        "output": "0\n0\n0\n0"
+    },
+    {
+        "input": "3",
+        "output": "0\n0\n0"
+    },
+    {
+        "input": "10",
+        "output": "0\n0\n0\n0\n0\n1\n0\n0\n0\n0"
+    },
+    {
+        "input": "8",
+        "output": "0\n0\n0\n0\n0\n1\n0\n0"
+    },
+    {
+        "input": "6",
+        "output": "0\n0\n0\n0\n0\n1"
+    },
+    {
+        "input": "2",
+        "output": "0\n0"
+    },
+    {
+        "input": "9",
+        "output": "0\n0\n0\n0\n0\n1\n0\n0\n0"
+    },
+    {
+        "input": "5",
+        "output": "0\n0\n0\n0\n0"
+    },
+    {
+        "input": "7",
+        "output": "0\n0\n0\n0\n0\n1\n0"
+    }
+]

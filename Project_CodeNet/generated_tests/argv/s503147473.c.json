@@ -1,0 +1,42 @@
+[
+    {
+        "input": "2 1000",
+        "output": "Yes"
+    },
+    {
+        "input": "1 501",
+        "output": "No"
+    },
+    {
+        "input": "10 4999",
+        "output": "Yes"
+    },
+    {
+        "input": "10 5001",
+        "output": "No"
+    },
+    {
+        "input": "2 999",
+        "output": "Yes"
+    },
+    {
+        "input": "2 1001",
+        "output": "No"
+    },
+    {
+        "input": "1 499",
+        "output": "Yes"
+    },
+    {
+        "input": "0 0",
+        "output": "Yes"
+    },
+    {
+        "input": "1 500",
+        "output": "Yes"
+    },
+    {
+        "input": "10 5000",
+        "output": "Yes"
+    }
+]

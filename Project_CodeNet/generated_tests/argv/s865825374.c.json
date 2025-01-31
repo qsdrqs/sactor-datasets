@@ -1,0 +1,42 @@
+[
+    {
+        "input": "a b ccc",
+        "output": "A"
+    },
+    {
+        "input": "abc b c",
+        "output": "B"
+    },
+    {
+        "input": "abc abc abc",
+        "output": "A"
+    },
+    {
+        "input": "a bbb c",
+        "output": "A"
+    },
+    {
+        "input": "abc bca cab",
+        "output": "A"
+    },
+    {
+        "input": "a bb ccc",
+        "output": "A"
+    },
+    {
+        "input": "aaa b c",
+        "output": "A"
+    },
+    {
+        "input": "a b c",
+        "output": "A"
+    },
+    {
+        "input": "ab bc ca",
+        "output": "A"
+    },
+    {
+        "input": "aaa bbb ccc",
+        "output": "A"
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "command": "sactor run-tests --type bin input_output.json %t 0 --feed-as-args"
+    },
+    {
+        "command": "sactor run-tests --type bin input_output.json %t 1 --feed-as-args"
+    },
+    {
+        "command": "sactor run-tests --type bin input_output.json %t 2 --feed-as-args"
+    },
+    {
+        "command": "sactor run-tests --type bin input_output.json %t 3 --feed-as-args"
+    },
+    {
+        "command": "sactor run-tests --type bin input_output.json %t 4 --feed-as-args"
+    },
+    {
+        "command": "sactor run-tests --type bin input_output.json %t 5 --feed-as-args"
+    },
+    {
+        "command": "sactor run-tests --type bin input_output.json %t 6 --feed-as-args"
+    },
+    {
+        "command": "sactor run-tests --type bin input_output.json %t 7 --feed-as-args"
+    },
+    {
+        "command": "sactor run-tests --type bin input_output.json %t 8 --feed-as-args"
+    },
+    {
+        "command": "sactor run-tests --type bin input_output.json %t 9 --feed-as-args"
+    }
+]

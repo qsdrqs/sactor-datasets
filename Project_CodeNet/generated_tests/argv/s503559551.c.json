@@ -1,0 +1,42 @@
+[
+    {
+        "input": "12 11",
+        "output": "23/n"
+    },
+    {
+        "input": "10 15",
+        "output": "1/n"
+    },
+    {
+        "input": "22 3",
+        "output": "1/n"
+    },
+    {
+        "input": "12 12",
+        "output": "0/n"
+    },
+    {
+        "input": "5 20",
+        "output": "1/n"
+    },
+    {
+        "input": "24 24",
+        "output": "24/n"
+    },
+    {
+        "input": "18 7",
+        "output": "1/n"
+    },
+    {
+        "input": "1 23",
+        "output": "0/n"
+    },
+    {
+        "input": "0 0",
+        "output": "0/n"
+    },
+    {
+        "input": "23 1",
+        "output": "0/n"
+    }
+]

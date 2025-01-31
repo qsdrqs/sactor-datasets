@@ -1,0 +1,42 @@
+[
+    {
+        "input": "42 41",
+        "output": "safe"
+    },
+    {
+        "input": "50 50",
+        "output": "unsafe"
+    },
+    {
+        "input": "999 1000",
+        "output": "unsafe"
+    },
+    {
+        "input": "10 5",
+        "output": "safe"
+    },
+    {
+        "input": "20 25",
+        "output": "unsafe"
+    },
+    {
+        "input": "100 99",
+        "output": "safe"
+    },
+    {
+        "input": "1 0",
+        "output": "safe"
+    },
+    {
+        "input": "123 122",
+        "output": "safe"
+    },
+    {
+        "input": "0 0",
+        "output": "unsafe"
+    },
+    {
+        "input": "15 15",
+        "output": "unsafe"
+    }
+]

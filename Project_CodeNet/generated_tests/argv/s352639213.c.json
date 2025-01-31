@@ -1,0 +1,42 @@
+[
+    {
+        "input": "./program H h 8",
+        "output": ""
+    },
+    {
+        "input": "./program A aaa 1",
+        "output": ""
+    },
+    {
+        "input": "./program C ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc 3",
+        "output": ""
+    },
+    {
+        "input": "./program G gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg 7",
+        "output": ""
+    },
+    {
+        "input": "./program I iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii 9",
+        "output": ""
+    },
+    {
+        "input": "./program B bbb 2",
+        "output": ""
+    },
+    {
+        "input": "./program D d 4",
+        "output": ""
+    },
+    {
+        "input": "./program E eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee 5",
+        "output": ""
+    },
+    {
+        "input": "./program F ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff 6",
+        "output": ""
+    },
+    {
+        "input": "./program Hello World 123",
+        "output": ""
+    }
+]

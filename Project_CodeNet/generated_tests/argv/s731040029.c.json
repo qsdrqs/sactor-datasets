@@ -1,0 +1,42 @@
+[
+    {
+        "input": "3 1 10",
+        "output": "OKOKOKNG"
+    },
+    {
+        "input": "7 14 28",
+        "output": "OKOKNG"
+    },
+    {
+        "input": "1 1 2",
+        "output": "OKNG"
+    },
+    {
+        "input": "9 81 82",
+        "output": "OKNG"
+    },
+    {
+        "input": "4 0 20",
+        "output": "OKOKOKOKOKNG"
+    },
+    {
+        "input": "1 1 1",
+        "output": "NG"
+    },
+    {
+        "input": "5 5 5",
+        "output": "NG"
+    },
+    {
+        "input": "2 5 15",
+        "output": "OKOKOKOKOKNG"
+    },
+    {
+        "input": "10 100 101",
+        "output": "OKNG"
+    },
+    {
+        "input": "6 17 23",
+        "output": "OKNG"
+    }
+]

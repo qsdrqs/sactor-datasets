@@ -1,0 +1,42 @@
+[
+    {
+        "input": "5 3 10",
+        "output": "8"
+    },
+    {
+        "input": "7 7 7",
+        "output": "7"
+    },
+    {
+        "input": "8 2 3",
+        "output": "0"
+    },
+    {
+        "input": "15 10 5",
+        "output": "0"
+    },
+    {
+        "input": "12 12 12",
+        "output": "12"
+    },
+    {
+        "input": "20 10 15",
+        "output": "5"
+    },
+    {
+        "input": "10 5 3",
+        "output": "0"
+    },
+    {
+        "input": "0 0 0",
+        "output": "0"
+    },
+    {
+        "input": "1 2 3",
+        "output": "3"
+    },
+    {
+        "input": "100 50 60",
+        "output": "10"
+    }
+]

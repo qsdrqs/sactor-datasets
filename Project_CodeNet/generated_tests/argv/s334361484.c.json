@@ -1,0 +1,42 @@
+[
+    {
+        "input": "hello",
+        "output": "no"
+    },
+    {
+        "input": "aabbcc",
+        "output": "no"
+    },
+    {
+        "input": "abcdefa",
+        "output": "yes"
+    },
+    {
+        "input": "aa",
+        "output": "yes"
+    },
+    {
+        "input": "xyzxyz",
+        "output": "no"
+    },
+    {
+        "input": "1234567890",
+        "output": "yes"
+    },
+    {
+        "input": "unique",
+        "output": "yes"
+    },
+    {
+        "input": "abcdefghijklmnopqrstuvwxyza",
+        "output": "yes"
+    },
+    {
+        "input": "abcde",
+        "output": "yes"
+    },
+    {
+        "input": "abcdefghijklmnopqrstuvwxyz",
+        "output": "yes"
+    }
+]

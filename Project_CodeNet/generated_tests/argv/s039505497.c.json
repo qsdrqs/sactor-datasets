@@ -1,0 +1,42 @@
+[
+    {
+        "input": "10 45",
+        "output": "5"
+    },
+    {
+        "input": "11 50",
+        "output": "5"
+    },
+    {
+        "input": "9 40",
+        "output": "5"
+    },
+    {
+        "input": "6 25",
+        "output": "5"
+    },
+    {
+        "input": "3 10",
+        "output": "4"
+    },
+    {
+        "input": "7 30",
+        "output": "5"
+    },
+    {
+        "input": "5 20",
+        "output": "5"
+    },
+    {
+        "input": "4 15",
+        "output": "4"
+    },
+    {
+        "input": "8 35",
+        "output": "5"
+    },
+    {
+        "input": "2 5",
+        "output": "3"
+    }
+]

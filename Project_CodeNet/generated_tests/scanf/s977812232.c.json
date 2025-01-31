@@ -1,0 +1,42 @@
+[
+    {
+        "input": "7\ni 50\ni 30\ni 70\ni 20\ni 40\ni 60\ni 80\np",
+        "output": ""
+    },
+    {
+        "input": "9\ni 9\ni 5\ni 12\ni 3\ni 7\ni 10\ni 15\np\nf 7",
+        "output": "3 5 7 9 10 12 15\n9 5 3 7 12 10 15\nyes"
+    },
+    {
+        "input": "3\ni 100\nf 100\nd 100",
+        "output": "yes"
+    },
+    {
+        "input": "2\ni 12\np",
+        "output": "12\n12"
+    },
+    {
+        "input": "6\ni 22\ni 11\ni 33\ni 5\ni 17\ni 27\np",
+        "output": ""
+    },
+    {
+        "input": "8\ni 8\ni 3\ni 10\ni 1\ni 6\ni 14\ni 4\ni 7\np",
+        "output": ""
+    },
+    {
+        "input": "6\ni 5\ni 3\ni 7\nf 3\nd 5\np",
+        "output": "yes\n3 7\n7 3"
+    },
+    {
+        "input": "10\ni 25\ni 15\ni 35\ni 10\ni 20\ni 30\ni 40\np\nd 15\np",
+        "output": "10 15 20 25 30 35 40\n25 15 10 20 35 30 40\n10 20 25 30 35 40\n25 20 10 35 30 40"
+    },
+    {
+        "input": "5\ni 10\ni 20\ni 30\np\nf 20",
+        "output": "10 20 30\n10 20 30\nyes"
+    },
+    {
+        "input": "4\ni 15\ni 10\ni 20\nf 25",
+        "output": "no"
+    }
+]

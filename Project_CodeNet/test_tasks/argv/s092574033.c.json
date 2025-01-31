@@ -1,0 +1,42 @@
+[
+    {
+        "command": "sactor run-tests --type bin /home/qsdrqs/sactor-datasets/Project_CodeNet/generated_tests/argv/s092574033.c.json %t 0 --feed-as-args",
+        "test_id": 0
+    },
+    {
+        "command": "sactor run-tests --type bin /home/qsdrqs/sactor-datasets/Project_CodeNet/generated_tests/argv/s092574033.c.json %t 1 --feed-as-args",
+        "test_id": 1
+    },
+    {
+        "command": "sactor run-tests --type bin /home/qsdrqs/sactor-datasets/Project_CodeNet/generated_tests/argv/s092574033.c.json %t 2 --feed-as-args",
+        "test_id": 2
+    },
+    {
+        "command": "sactor run-tests --type bin /home/qsdrqs/sactor-datasets/Project_CodeNet/generated_tests/argv/s092574033.c.json %t 3 --feed-as-args",
+        "test_id": 3
+    },
+    {
+        "command": "sactor run-tests --type bin /home/qsdrqs/sactor-datasets/Project_CodeNet/generated_tests/argv/s092574033.c.json %t 4 --feed-as-args",
+        "test_id": 4
+    },
+    {
+        "command": "sactor run-tests --type bin /home/qsdrqs/sactor-datasets/Project_CodeNet/generated_tests/argv/s092574033.c.json %t 5 --feed-as-args",
+        "test_id": 5
+    },
+    {
+        "command": "sactor run-tests --type bin /home/qsdrqs/sactor-datasets/Project_CodeNet/generated_tests/argv/s092574033.c.json %t 6 --feed-as-args",
+        "test_id": 6
+    },
+    {
+        "command": "sactor run-tests --type bin /home/qsdrqs/sactor-datasets/Project_CodeNet/generated_tests/argv/s092574033.c.json %t 7 --feed-as-args",
+        "test_id": 7
+    },
+    {
+        "command": "sactor run-tests --type bin /home/qsdrqs/sactor-datasets/Project_CodeNet/generated_tests/argv/s092574033.c.json %t 8 --feed-as-args",
+        "test_id": 8
+    },
+    {
+        "command": "sactor run-tests --type bin /home/qsdrqs/sactor-datasets/Project_CodeNet/generated_tests/argv/s092574033.c.json %t 9 --feed-as-args",
+        "test_id": 9
+    }
+]

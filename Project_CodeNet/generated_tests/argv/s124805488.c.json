@@ -1,0 +1,42 @@
+[
+    {
+        "input": "2147483647 -2147483648",
+        "output": "a > b"
+    },
+    {
+        "input": "5 3",
+        "output": "a > b"
+    },
+    {
+        "input": "1 2",
+        "output": "a < b"
+    },
+    {
+        "input": "-5 -5",
+        "output": "a == b"
+    },
+    {
+        "input": "-10 10",
+        "output": "a < b"
+    },
+    {
+        "input": "7 7",
+        "output": "a == b"
+    },
+    {
+        "input": "0 0",
+        "output": "a == b"
+    },
+    {
+        "input": "0 -1",
+        "output": "a > b"
+    },
+    {
+        "input": "100 100",
+        "output": "a == b"
+    },
+    {
+        "input": "-1 0",
+        "output": "a < b"
+    }
+]

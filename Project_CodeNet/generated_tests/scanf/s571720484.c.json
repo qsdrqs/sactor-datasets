@@ -1,0 +1,42 @@
+[
+    {
+        "input": "TSTTSTTSTTSTTSTTST",
+        "output": "6"
+    },
+    {
+        "input": "SSSSSS",
+        "output": "6"
+    },
+    {
+        "input": "TTTTTT",
+        "output": "6"
+    },
+    {
+        "input": "TSTTSTTSTTST",
+        "output": "4"
+    },
+    {
+        "input": "TSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTST",
+        "output": "16"
+    },
+    {
+        "input": "TSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTST",
+        "output": "14"
+    },
+    {
+        "input": "TSTTST",
+        "output": "2"
+    },
+    {
+        "input": "TSTTSTTSTTSTTSTTSTTSTTSTTSTTST",
+        "output": "10"
+    },
+    {
+        "input": "TSTTSTTSTTSTTSTTSTTSTTST",
+        "output": "8"
+    },
+    {
+        "input": "TSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTSTTST",
+        "output": "12"
+    }
+]

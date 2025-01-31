@@ -1,0 +1,42 @@
+[
+    {
+        "input": "1",
+        "output": "3"
+    },
+    {
+        "input": "4",
+        "output": "84"
+    },
+    {
+        "input": "3",
+        "output": "39"
+    },
+    {
+        "input": "10",
+        "output": "1110"
+    },
+    {
+        "input": "8",
+        "output": "584"
+    },
+    {
+        "input": "6",
+        "output": "258"
+    },
+    {
+        "input": "2",
+        "output": "14"
+    },
+    {
+        "input": "9",
+        "output": "819"
+    },
+    {
+        "input": "5",
+        "output": "155"
+    },
+    {
+        "input": "7",
+        "output": "399"
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "input": "4",
+        "output": "64"
+    },
+    {
+        "input": "3",
+        "output": "27"
+    },
+    {
+        "input": "5",
+        "output": "125"
+    },
+    {
+        "input": "1",
+        "output": "1"
+    },
+    {
+        "input": "100",
+        "output": "1000000"
+    },
+    {
+        "input": "10",
+        "output": "1000"
+    },
+    {
+        "input": "2",
+        "output": "8"
+    },
+    {
+        "input": "50",
+        "output": "125000"
+    },
+    {
+        "input": "99",
+        "output": "970299"
+    },
+    {
+        "input": "75",
+        "output": "421875"
+    }
+]

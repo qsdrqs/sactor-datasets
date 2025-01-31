@@ -1,0 +1,42 @@
+[
+    {
+        "input": "8 8",
+        "output": "a=1\tb=1\na=2\tb=2\na=3\tb=3\na=4\tb=4\na=5\tb=5\na=6\tb=6\na=7\tb=7\na=8\tb=8\n8"
+    },
+    {
+        "input": "2 2",
+        "output": "a=1\tb=1\na=2\tb=2\n2"
+    },
+    {
+        "input": "12 31",
+        "output": "a=1\tb=1\na=2\tb=2\na=3\tb=3\na=4\tb=4\na=5\tb=5\na=6\tb=6\na=7\tb=7\na=8\tb=8\na=9\tb=9\na=10\tb=10\na=11\tb=11\na=12\tb=12\n12"
+    },
+    {
+        "input": "1 1",
+        "output": "a=1\tb=1\n1"
+    },
+    {
+        "input": "6 6",
+        "output": "a=1\tb=1\na=2\tb=2\na=3\tb=3\na=4\tb=4\na=5\tb=5\na=6\tb=6\n6"
+    },
+    {
+        "input": "9 9",
+        "output": "a=1\tb=1\na=2\tb=2\na=3\tb=3\na=4\tb=4\na=5\tb=5\na=6\tb=6\na=7\tb=7\na=8\tb=8\na=9\tb=9\n9"
+    },
+    {
+        "input": "4 4",
+        "output": "a=1\tb=1\na=2\tb=2\na=3\tb=3\na=4\tb=4\n4"
+    },
+    {
+        "input": "5 5",
+        "output": "a=1\tb=1\na=2\tb=2\na=3\tb=3\na=4\tb=4\na=5\tb=5\n5"
+    },
+    {
+        "input": "7 7",
+        "output": "a=1\tb=1\na=2\tb=2\na=3\tb=3\na=4\tb=4\na=5\tb=5\na=6\tb=6\na=7\tb=7\n7"
+    },
+    {
+        "input": "3 3",
+        "output": "a=1\tb=1\na=2\tb=2\na=3\tb=3\n3"
+    }
+]

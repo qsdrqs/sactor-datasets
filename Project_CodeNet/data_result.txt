@@ -1,0 +1,105 @@
+claude:
+
+Total: 100
+Success: 86
+Total fails: 14
+Test fails: 12
+Compile fails: 1
+Sactor functional fails: 0
+Success in one: 86
+Success in two: 0
+Success in three: 0
+Success more than three: 0
+
+
+Total: 86
+Success: 81
+Total fails: 5
+Test fails: 4
+Compile fails: 0
+Sactor functional fails: 1
+Success in one: 66
+Success in two: 7
+Success in three: 5
+Success in four: 1
+Success in five: 2
+Success in six: 0
+
+
+gemini:
+
+Total: 100
+Success: 80
+Total fails: 20
+Test fails: 13
+Compile fails: 7
+Sactor functional fails: 0
+Success in one: 80
+Success in two: 0
+Success in three: 0
+Success more than three: 0
+
+Total: 80
+Success: 74
+Total fails: 6
+Test fails: 4
+Compile fails: 0
+Sactor functional fails: 2
+Success in one: 69
+Success in two: 3
+Success in three: 0
+Success in four: 0
+Success in five: 1
+Success in six: 1
+
+llama3.3:
+
+Total: 100
+Success: 78
+Total fails: 22
+Test fails: 10
+Compile fails: 12
+Sactor functional fails: 0
+Success in one: 78
+Success in two: 0
+Success in three: 0
+Success more than three: 0
+
+Total: 78
+Success: 63
+Total fails: 15
+Test fails: 11
+Compile fails: 3
+Sactor functional fails: 1
+Success in one: 55
+Success in two: 7
+Success in three: 0
+Success in four: 1
+Success in five: 0
+Success in six: 0
+
+
+gpt-4o:
+Total: 100
+Success: 90
+Total fails: 10
+Test fails: 8
+Compile fails: 0
+Sactor functional fails: 0
+Success in one: 90
+Success in two: 0
+Success in three: 0
+Success more than three: 0
+
+Total: 90
+Success: 80
+Total fails: 10
+Test fails: 10
+Compile fails: 0
+Sactor functional fails: 0
+Success in one: 75
+Success in two: 4
+Success in three: 0
+Success in four: 0
+Success in five: 1
+Success in six: 0

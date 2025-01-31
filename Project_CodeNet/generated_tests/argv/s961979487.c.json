@@ -1,0 +1,42 @@
+[
+    {
+        "input": "10 5 15",
+        "output": "safe"
+    },
+    {
+        "input": "1000000000 500000000 1000000000",
+        "output": "safe"
+    },
+    {
+        "input": "100 50 150",
+        "output": "safe"
+    },
+    {
+        "input": "1000000000 1 1000000000",
+        "output": "safe"
+    },
+    {
+        "input": "1 2 3",
+        "output": "safe"
+    },
+    {
+        "input": "1000000 500000 1500000",
+        "output": "safe"
+    },
+    {
+        "input": "1000000000 1000000000 1000000000",
+        "output": "delicious"
+    },
+    {
+        "input": "1000 500 1500",
+        "output": "safe"
+    },
+    {
+        "input": "999999999 500000000 1000000000",
+        "output": "safe"
+    },
+    {
+        "input": "1 1 1",
+        "output": "delicious"
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "input": "2",
+        "output": "hon"
+    },
+    {
+        "input": "4",
+        "output": "hon"
+    },
+    {
+        "input": "6",
+        "output": "pon"
+    },
+    {
+        "input": "1",
+        "output": "pon"
+    },
+    {
+        "input": "0",
+        "output": "pon"
+    },
+    {
+        "input": "8",
+        "output": "pon"
+    },
+    {
+        "input": "7",
+        "output": "hon"
+    },
+    {
+        "input": "3",
+        "output": "bon"
+    },
+    {
+        "input": "9",
+        "output": "hon"
+    },
+    {
+        "input": "5",
+        "output": "hon"
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "input": "70",
+        "output": "Yes"
+    },
+    {
+        "input": "700",
+        "output": "Yes"
+    },
+    {
+        "input": "70000000",
+        "output": "Yes"
+    },
+    {
+        "input": "7000",
+        "output": "Yes"
+    },
+    {
+        "input": "700000",
+        "output": "Yes"
+    },
+    {
+        "input": "700000000",
+        "output": "Yes"
+    },
+    {
+        "input": "7000000000",
+        "output": "Yes"
+    },
+    {
+        "input": "70000",
+        "output": "Yes"
+    },
+    {
+        "input": "7000000",
+        "output": "Yes"
+    },
+    {
+        "input": "7",
+        "output": "Yes"
+    }
+]

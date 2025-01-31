@@ -1,0 +1,42 @@
+[
+    {
+        "input": "6\nRGBRGB",
+        "output": "2"
+    },
+    {
+        "input": "10\nRGBRGBRGBR",
+        "output": "20"
+    },
+    {
+        "input": "2\nRG",
+        "output": "0"
+    },
+    {
+        "input": "1\nR",
+        "output": "0"
+    },
+    {
+        "input": "9\nRGBRGBRGB",
+        "output": "14"
+    },
+    {
+        "input": "8\nGBRGBRGB",
+        "output": "8"
+    },
+    {
+        "input": "4\nRRRR",
+        "output": "0"
+    },
+    {
+        "input": "3\nRGB",
+        "output": "0"
+    },
+    {
+        "input": "5\nRGBGB",
+        "output": "3"
+    },
+    {
+        "input": "7\nRGBGBGR",
+        "output": "10"
+    }
+]

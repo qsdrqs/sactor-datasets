@@ -1,0 +1,42 @@
+[
+    {
+        "input": "7\ninsert 7\ninsert 14\ninsert 21\ndelete 14\ndeleteFirst\ninsert 28\ndeleteLast",
+        "output": "28"
+    },
+    {
+        "input": "5\ninsert 10\ninsert 20\ndeleteFirst\ninsert 30\ndeleteLast",
+        "output": "30"
+    },
+    {
+        "input": "3\ninsert 1\ninsert 2\ndelete 1",
+        "output": "2"
+    },
+    {
+        "input": "6\ninsert 1\ninsert 2\ninsert 3\ndeleteFirst\ndeleteLast\ndelete 2",
+        "output": ""
+    },
+    {
+        "input": "4\ninsert 5\ninsert 10\ndelete 5\ndelete 10",
+        "output": ""
+    },
+    {
+        "input": "1\ninsert 42",
+        "output": "42"
+    },
+    {
+        "input": "2\ninsert 100\ndeleteFirst",
+        "output": ""
+    },
+    {
+        "input": "8\ninsert 1\ninsert 2\ninsert 3\ninsert 4\ndelete 3\ndeleteFirst\ndeleteLast\ninsert 5",
+        "output": "5 2"
+    },
+    {
+        "input": "10\ninsert 1\ninsert 2\ninsert 3\ninsert 4\ninsert 5\ndelete 3\ndeleteFirst\ndeleteLast\ninsert 6\ndelete 2",
+        "output": "6 4"
+    },
+    {
+        "input": "3\ninsert 99\ndeleteLast\ninsert 100",
+        "output": "100"
+    }
+]

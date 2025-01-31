@@ -1,0 +1,42 @@
+[
+    {
+        "input": "4",
+        "output": "ABC"
+    },
+    {
+        "input": "3",
+        "output": "ABC"
+    },
+    {
+        "input": "5",
+        "output": "ABC"
+    },
+    {
+        "input": "2000",
+        "output": "ABD"
+    },
+    {
+        "input": "1",
+        "output": "ABC"
+    },
+    {
+        "input": "1997",
+        "output": "ABD"
+    },
+    {
+        "input": "0",
+        "output": "ABC"
+    },
+    {
+        "input": "2",
+        "output": "ABC"
+    },
+    {
+        "input": "1998",
+        "output": "ABD"
+    },
+    {
+        "input": "1999",
+        "output": "ABD"
+    }
+]

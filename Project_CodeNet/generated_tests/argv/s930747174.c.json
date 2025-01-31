@@ -1,0 +1,42 @@
+[
+    {
+        "input": "racecar",
+        "output": "racecar"
+    },
+    {
+        "input": "C_programming",
+        "output": "gnimmargorp_C"
+    },
+    {
+        "input": "a",
+        "output": "a"
+    },
+    {
+        "input": "hello",
+        "output": "olleh"
+    },
+    {
+        "input": "ThisIsALongString",
+        "output": "gnirtSgnoLAsIsihT"
+    },
+    {
+        "input": "world",
+        "output": "dlrow"
+    },
+    {
+        "input": "abcdefghijklmnopqrst",
+        "output": "tsrqponmlkjihgfedcba"
+    },
+    {
+        "input": "1234567890",
+        "output": "0987654321"
+    },
+    {
+        "input": "12345",
+        "output": "54321"
+    },
+    {
+        "input": "!@#$%^&*()",
+        "output": ")(*&^%$#@!"
+    }
+]

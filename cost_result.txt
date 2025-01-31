@@ -1,0 +1,51 @@
+Transcoder-IR:
+
+python stat_average_cost.py translated_data_claude
+Total success: 54
+Average costed tokens: 4595.333333333333
+Average costed time: 35.23919803566403
+Average queries: 5.148148148148148
+
+python stat_average_cost.py translated_data_gemini
+Total success: 75
+Average costed tokens: 3343.12
+Average costed time: 15.120366004308066
+Average queries: 4.24
+
+stat_average_cost.py translated_data_llama3.3
+Total success: 55
+Average costed tokens: 6265.127272727273
+Average costed time: 69.98043629472906
+Average queries: 6.127272727272727
+
+stat_average_cost.py translated_data_gpt4o
+Total success: 78
+Average costed tokens: 2651.2051282051284
+Average costed time: 14.44524419002044
+Average queries: 4.243589743589744
+
+CodeNet:
+
+python stat_average_cost.py translated_data_claude/argv
+Total success: 81
+Average costed tokens: 3080.283950617284
+Average costed time: 25.95353376718215
+Average queries: 3.1481481481481484
+
+python stat_average_cost.py translated_data_gemini/argv
+Total success: 74
+Average costed tokens: 2209.3783783783783
+Average costed time: 10.885458675590721
+Average queries: 2.391891891891892
+
+python stat_average_cost.py translated_data_llama3.3/argv
+Total success: 63
+Average costed tokens: 3035.4285714285716
+Average costed time: 37.108472668935384
+Average queries: 3.0634920634920637
+
+python stat_average_cost.py translated_data_gpt4o/argv
+Total success: 80
+Average costed tokens: 2565.3625
+Average costed time: 16.988197112083434
+Average queries: 2.95

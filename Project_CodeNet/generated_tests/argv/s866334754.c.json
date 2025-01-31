@@ -1,0 +1,42 @@
+[
+    {
+        "input": "\"123abc\"",
+        "output": "no"
+    },
+    {
+        "input": "\"\"",
+        "output": "no"
+    },
+    {
+        "input": "\"ABCDEFG\"",
+        "output": "no"
+    },
+    {
+        "input": "\"123 456\"",
+        "output": "no"
+    },
+    {
+        "input": "\"a\"",
+        "output": "no"
+    },
+    {
+        "input": "\"hello\"",
+        "output": "no"
+    },
+    {
+        "input": "\"a1b2c3\"",
+        "output": "no"
+    },
+    {
+        "input": "\"!@#$%^&*()\"",
+        "output": "no"
+    },
+    {
+        "input": "\"abcdefghijklmnopqrstuvwxyz\"",
+        "output": "no"
+    },
+    {
+        "input": "\"12345\"",
+        "output": "no"
+    }
+]

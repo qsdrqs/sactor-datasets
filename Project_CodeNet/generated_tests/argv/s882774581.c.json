@@ -1,0 +1,42 @@
+[
+    {
+        "input": "BBB",
+        "output": "No"
+    },
+    {
+        "input": "BAA",
+        "output": "Yes"
+    },
+    {
+        "input": "ABB",
+        "output": "Yes"
+    },
+    {
+        "input": "BBA",
+        "output": "Yes"
+    },
+    {
+        "input": "AAA",
+        "output": "No"
+    },
+    {
+        "input": "AAB",
+        "output": "Yes"
+    },
+    {
+        "input": "BAB",
+        "output": "Yes"
+    },
+    {
+        "input": "ABA",
+        "output": "Yes"
+    },
+    {
+        "input": "ABC",
+        "output": "Yes"
+    },
+    {
+        "input": "CAB",
+        "output": "Yes"
+    }
+]

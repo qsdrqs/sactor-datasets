@@ -1,0 +1,42 @@
+[
+    {
+        "input": "15 2",
+        "output": "Even"
+    },
+    {
+        "input": "7 8",
+        "output": "Even"
+    },
+    {
+        "input": "3 4",
+        "output": "Even"
+    },
+    {
+        "input": "5 5",
+        "output": "Odd"
+    },
+    {
+        "input": "1000 2000",
+        "output": "Even"
+    },
+    {
+        "input": "13 13",
+        "output": "Odd"
+    },
+    {
+        "input": "123 456",
+        "output": "Even"
+    },
+    {
+        "input": "99 99",
+        "output": "Odd"
+    },
+    {
+        "input": "2 2",
+        "output": "Even"
+    },
+    {
+        "input": "0 1",
+        "output": "Even"
+    }
+]

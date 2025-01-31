@@ -1,0 +1,14 @@
+transcoder:
+
+translated_data_c2rust_idiom_stat_stat.csv: Total: 100, Unsafe free fraction: 0.0, Average unsafe fraction: 1.0
+translated_data_crown_idiom_stat_stat.csv: Total: 100, Unsafe free fraction: 0.0, Average unsafe fraction: 1.0
+translated_data_vert_idiom_stat_stat.csv: Total: 92, Unsafe free fraction: 0.9565217391304348, Average unsafe fraction: 0.015768838454672956
+translated_data_gpt4o_idiom_stat_unidiomatic_stat.csv: Total: 83, Unsafe free fraction: 0.03614457831325301, Average unsafe fraction: 0.9165136819773874
+translated_data_gpt4o_idiom_stat_idiomatic_stat.csv: Total: 78, Unsafe free fraction: 1.0, Average unsafe fraction: 0.0
+
+codenet:
+
+translated_data_c2rust_idiom_stat_stat.csv: Total: 100, Unsafe free fraction: 0.0, Average unsafe fraction: 0.7593081596563352
+translated_data_crown_idiom_stat_stat.csv: Total: 100, Unsafe free fraction: 0.0, Average unsafe fraction: 0.7593081596563352
+translated_data_gpt4o_idiom_stat_unidiomatic_stat.csv: Total: 90, Unsafe free fraction: 0.011111111111111112, Average unsafe fraction: 0.4270782642017544
+translated_data_gpt4o_idiom_stat_idiomatic_stat.csv: Total: 80, Unsafe free fraction: 1.0, Average unsafe fraction: 0.0

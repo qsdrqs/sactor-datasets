@@ -1,0 +1,74 @@
+[
+    {
+        "input": "8 8",
+        "output": "Yay!"
+    },
+    {
+        "input": "3 13",
+        "output": ":("
+    },
+    {
+        "input": "2 3",
+        "output": "Yay!"
+    },
+    {
+        "input": "7 9",
+        "output": ":("
+    },
+    {
+        "input": "1 1",
+        "output": "Yay!"
+    },
+    {
+        "input": "4 5",
+        "output": "Yay!"
+    },
+    {
+        "input": "15 1",
+        "output": ":("
+    },
+    {
+        "input": "10 6",
+        "output": ":("
+    },
+    {
+        "input": "8 8",
+        "output": "Yay!"
+    },
+    {
+        "input": "3 13",
+        "output": ":("
+    },
+    {
+        "input": "2 3",
+        "output": "Yay!"
+    },
+    {
+        "input": "5 10",
+        "output": ":("
+    },
+    {
+        "input": "7 9",
+        "output": ":("
+    },
+    {
+        "input": "1 1",
+        "output": "Yay!"
+    },
+    {
+        "input": "9 7",
+        "output": ":("
+    },
+    {
+        "input": "4 5",
+        "output": "Yay!"
+    },
+    {
+        "input": "15 1",
+        "output": ":("
+    },
+    {
+        "input": "10 6",
+        "output": ":("
+    }
+]

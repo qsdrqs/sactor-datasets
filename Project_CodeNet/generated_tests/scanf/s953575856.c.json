@@ -1,0 +1,42 @@
+[
+    {
+        "input": "1\nabc",
+        "output": "abc"
+    },
+    {
+        "input": "2\nabc\ndef",
+        "output": "abc"
+    },
+    {
+        "input": "9\na\nb\nc\nd\ne\nf\ng\nh\ni",
+        "output": "a"
+    },
+    {
+        "input": "8\nabcdefghijklmnopqrst\nabcdefghijklmnopqrs\nabcdefghijklmnopqr\nabcdefghijklmnopq\nabcdefghijklmnop\nabcdefghijklmno\nabcdefghijklmn\nabcdefghijklm",
+        "output": "abcdefghijklmnopqrst"
+    },
+    {
+        "input": "3\nxyz\nabc\ndef",
+        "output": "abc"
+    },
+    {
+        "input": "5\nabcdef\nabcde\nabcd\nabc\nab",
+        "output": "abcdef"
+    },
+    {
+        "input": "4\na\nb\nc\nd",
+        "output": "a"
+    },
+    {
+        "input": "7\na\naa\naaa\naaaa\naaaaa\naaaaaa\naaaaaaa",
+        "output": "a"
+    },
+    {
+        "input": "0",
+        "output": ""
+    },
+    {
+        "input": "6\nz\ny\nx\nw\nv\nu",
+        "output": "u"
+    }
+]
