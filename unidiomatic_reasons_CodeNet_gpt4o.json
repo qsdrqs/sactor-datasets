@@ -1,0 +1,22 @@
+{
+    "Mishandling of argv parameters in the main function's translation leading to incorrect argument indexing": [
+        "s866334754.c",
+        "s910447231.c",
+        "s016316053.c",
+        "s092574033.c"
+    ],
+    "Incorrect handling of mutable global variables between C and Rust semantics": [
+        "s127651425.c",
+        "s107891584.c"
+    ],
+    "Incorrect translation of function names' casing conventions, causing function signature mismatches": [
+        "s627713376.c"
+    ],
+    "Format string translation error causing literal character differences in output": [
+        "s246854091.c",
+        "s485171693.c"
+    ],
+    "Incorrect type conversion when handling the seed value for srand, leading to different random number sequences between C and Rust": [
+        "s703625778.c"
+    ]
+}

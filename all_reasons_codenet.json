@@ -1,0 +1,12 @@
+[
+    "Mishandling of argv parameters in the main function's translation leading to incorrect argument indexing",
+    "Incorrect handling of mutable global variables between C and Rust semantics",
+    "Incorrect translation of function names' casing conventions, causing function signature mismatches",
+    "Format string translation error causing literal character differences in output",
+    "Incorrect seed value handling due to signed/unsigned casting differences between C's implicit conversions and Rust's explicit casts",
+    "Incorrect memory management of CString pointers leading to invalid frees of stack-allocated buffers",
+    "Incorrect handling of C standard library types and functions (e.g., c_char, size_t, stderr) when translating to Rust's libc crate and FFI bindings",
+    "Incorrect handling of loop termination conditions that leads to off-by-one errors in index calculations between C and Rust",
+    "Duplication of function definitions during code generation leading to multiple identical function entries",
+    "Incorrect type conversion when handling the seed value for srand, leading to different random number sequences between C and Rust"
+]

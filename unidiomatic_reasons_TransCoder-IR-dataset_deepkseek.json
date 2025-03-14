@@ -1,0 +1,22 @@
+{
+    "The generated Rust code lacks bounds checking for the input parameter 'm' being within the valid range of the allocated array. The original C code assumes m <= n but doesn't explicitly validate it, leading to out-of-bounds access in Rust when m exceeds the array size derived from n.": [
+        "DIFFERENT_WAYS_SUM_N_USING_NUMBERS_GREATER_EQUAL_M.c"
+    ],
+    "The generated Rust code uses i32 for array indices and arithmetic operations where usize is required, leading to type mismatches and potential underflow when casting negative values to usize. Additionally, modulus operations in Rust can yield negative results when the dividend is negative, causing out-of-bounds array access when cast to usize.": [],
+    "The generated Rust code correctly computes the string lengths via CStr::to_bytes().len() while the original C code uses an incorrect macro for array length, leading to differing 'n' and 'm' values. This discrepancy impacts the dynamic programming array dimensions and loop iterations, causing erroneous calculations.": [
+        "WAYS_TRANSFORMING_ONE_STRING_REMOVING_0_CHARACTERS.c",
+        "NUMBER_SUBSEQUENCES_FORM_AI_BJ_CK.c"
+    ],
+    "The generated Rust code does not handle empty input strings, leading to index out-of-bounds panics when accessing the first character. The original C code assumes the input string is always non-empty, causing undefined behavior when empty, but Rust enforces bounds checking and panics when accessing index 0 of an empty slice.": [
+        "COUNT_ROTATIONS_DIVISIBLE_8.c"
+    ],
+    "The generated Rust code does not handle characters outside the lowercase 'a'-'z' range, leading to invalid left shifts with negative values which cause overflow panics. The original C code allows undefined behavior for these cases, but Rust enforces strict bit shift validity checks resulting in runtime errors.": [],
+    "The generated Rust code does not handle the case where left-shifting 1 by 'n' bits exceeds the integer type's bit width, causing overflow panics. In C, this operation would wrap around (undefined behavior), but Rust enforces strict overflow checks in debug builds, leading to runtime errors when 'n' is larger than the integer's bit size. The translation tool should use a larger integer type (e.g., u64) for the shift operation to prevent overflow.": [],
+    "The generated Rust code uses i32 for variables that were declared as long long int in the C code, causing arithmetic overflow in sum operations. In C, the long long type can handle larger integers, but using a smaller type in Rust leads to overflow panics during additions exceeding the integer's maximum value.": [],
+    "The generated Rust code performs arithmetic operations that can overflow in debug mode when summing three i32::MIN initial values due to invalid input handling (n=0), causing runtime panics. The original C code allows such underflows as undefined behavior, but Rust enforces strict overflow checks in debug builds.": [],
+    "The generated Rust code does not check if the divisor 'n' is zero before performing modulus operations, leading to a runtime panic. The original C code allows 'n' to be zero resulting in undefined behavior, but Rust's strict runtime checks enforce handling this case, which the translated code neglects.": [],
+    "The generated Rust code computes the string length using the entire buffer size instead of stopping at the null terminator like C's strlen. This causes the loop to process unintended zero/invalid bytes beyond the actual string data, leading to incorrect product calculations. The original C code uses strlen to count only up to the first null byte, but the translation erroneously uses the full array/slice length in Rust.": [
+        "REMAINDER_7_LARGE_NUMBERS.c",
+        "FIND_PATTERNS_101_GIVEN_STRING.c"
+    ]
+}

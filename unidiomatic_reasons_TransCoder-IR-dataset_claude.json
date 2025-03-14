@@ -1,0 +1,73 @@
+{
+    "The generated Rust code lacks bounds checking for the input parameter 'm' being within the valid range of the allocated array. The original C code assumes m <= n but doesn't explicitly validate it, leading to out-of-bounds access in Rust when m exceeds the array size derived from n.": [
+        "COUNT_NUMBER_INCREASING_SUBSEQUENCES_SIZE_K.c",
+        "DIFFERENT_WAYS_SUM_N_USING_NUMBERS_GREATER_EQUAL_M.c",
+        "FIND_WHETHER_AN_ARRAY_IS_SUBSET_OF_ANOTHER_ARRAY_SET_1.c"
+    ],
+    "The generated Rust code uses i32 for array indices and arithmetic operations where usize is required, leading to type mismatches and potential underflow when casting negative values to usize. Additionally, modulus operations in Rust can yield negative results when the dividend is negative, causing out-of-bounds array access when cast to usize.": [
+        "GIVEN_LARGE_NUMBER_CHECK_SUBSEQUENCE_DIGITS_DIVISIBLE_8_1.c",
+        "COUNT_DISTINCT_OCCURRENCES_AS_A_SUBSEQUENCE.c",
+        "PAINTING_FENCE_ALGORITHM.c"
+    ],
+    "The generated Rust code correctly computes the string lengths via CStr::to_bytes().len() while the original C code uses an incorrect macro for array length, leading to differing 'n' and 'm' values. This discrepancy impacts the dynamic programming array dimensions and loop iterations, causing erroneous calculations.": [
+        "CHECK_POSSIBLE_TRANSFORM_ONE_STRING_ANOTHER.c",
+        "WAYS_TRANSFORMING_ONE_STRING_REMOVING_0_CHARACTERS.c",
+        "COUNT_PALINDROMIC_SUBSEQUENCE_GIVEN_STRING.c",
+        "REMAINDER_7_LARGE_NUMBERS.c"
+    ],
+    "The generated Rust code does not handle empty input strings, leading to index out-of-bounds panics when accessing the first character. The original C code assumes the input string is always non-empty, causing undefined behavior when empty, but Rust enforces bounds checking and panics when accessing index 0 of an empty slice.": [
+        "MINIMAL_OPERATIONS_MAKE_NUMBER_MAGICAL.c",
+        "COUNT_PALINDROME_SUB_STRINGS_STRING.c",
+        "MAXIMUM_SUM_ALTERNATING_SUBSEQUENCE_SUM.c",
+        "FIND_EQUAL_POINT_STRING_BRACKETS.c",
+        "COUNT_ROTATIONS_DIVISIBLE_8.c",
+        "LONGEST_PREFIX_ALSO_SUFFIX_1.c",
+        "MAXIMUM_CONSECUTIVE_REPEATING_CHARACTER_STRING_1.c",
+        "DECIMAL_REPRESENTATION_GIVEN_BINARY_STRING_DIVISIBLE_10_NOT.c",
+        "FIND_PATTERNS_101_GIVEN_STRING.c",
+        "CHECK_LARGE_NUMBER_DIVISIBLE_11_NOT.c",
+        "PROGRAM_FIND_REMAINDER_LARGE_NUMBER_DIVIDED_11.c",
+        "MINIMUM_CHARACTERS_ADDED_FRONT_MAKE_STRING_PALINDROME.c",
+        "CHECK_LARGE_NUMBER_DIVISIBLE_3_NOT.c",
+        "CHANGE_BITS_CAN_MADE_ONE_FLIP_1.c"
+    ],
+    "The generated Rust code does not handle characters outside the lowercase 'a'-'z' range, leading to invalid left shifts with negative values which cause overflow panics. The original C code allows undefined behavior for these cases, but Rust enforces strict bit shift validity checks resulting in runtime errors.": [],
+    "The generated Rust code does not handle the case where left-shifting 1 by 'n' bits exceeds the integer type's bit width, causing overflow panics. In C, this operation would wrap around (undefined behavior), but Rust enforces strict overflow checks in debug builds, leading to runtime errors when 'n' is larger than the integer's bit size. The translation tool should use a larger integer type (e.g., u64) for the shift operation to prevent overflow.": [
+        "SUM_OF_ALL_ELEMENTS_UP_TO_NTH_ROW_IN_A_PASCALS_TRIANGLE.c"
+    ],
+    "The generated Rust code uses i32 for variables that were declared as long long int in the C code, causing arithmetic overflow in sum operations. In C, the long long type can handle larger integers, but using a smaller type in Rust leads to overflow panics during additions exceeding the integer's maximum value.": [
+        "SCHEDULE_JOBS_SERVER_GETS_EQUAL_LOAD.c",
+        "FIND_MAXIMUM_DOT_PRODUCT_TWO_ARRAYS_INSERTION_0S.c"
+    ],
+    "The generated Rust code performs arithmetic operations that can overflow in debug mode when summing three i32::MIN initial values due to invalid input handling (n=0), causing runtime panics. The original C code allows such underflows as undefined behavior, but Rust enforces strict overflow checks in debug builds.": [
+        "MAXIMUM_TRIPLET_SUM_ARRAY_2.c"
+    ],
+    "The generated Rust code does not check if the divisor 'n' is zero before performing modulus operations, leading to a runtime panic. The original C code allows 'n' to be zero resulting in undefined behavior, but Rust's strict runtime checks enforce handling this case, which the translated code neglects.": [
+        "NUMBER_SUBSEQUENCES_STRING_DIVISIBLE_N.c"
+    ],
+    "The generated Rust code computes the string length using the entire buffer size instead of stopping at the null terminator like C's strlen. This causes the loop to process unintended zero/invalid bytes beyond the actual string data, leading to incorrect product calculations. The original C code uses strlen to count only up to the first null byte, but the translation erroneously uses the full array/slice length in Rust.": [
+        "PRODUCT_NODES_K_TH_LEVEL_TREE_REPRESENTED_STRING.c",
+        "SUM_NODES_K_TH_LEVEL_TREE_REPRESENTED_STRING.c",
+        "FIND_ONE_EXTRA_CHARACTER_STRING_1.c",
+        "CHECK_OCCURRENCES_CHARACTER_APPEAR_TOGETHER.c",
+        "CHECK_STRING_FOLLOWS_ANBN_PATTERN_NOT.c",
+        "NUMBER_SUBSEQUENCES_FORM_AI_BJ_CK.c",
+        "CONVERTING_ONE_STRING_USING_APPEND_DELETE_LAST_OPERATIONS.c",
+        "EFFICIENTLY_FIND_FIRST_REPEATED_CHARACTER_STRING_WITHOUT_USING_ADDITIONAL_DATA_STRUCTURE_ONE_TRAVERSAL.c",
+        "COUNT_CHARACTERS_STRING_DISTANCE_ENGLISH_ALPHABETS.c",
+        "PERFECT_REVERSIBLE_STRING.c"
+    ],
+    "The generated Rust code uses i64 for variables 'same' and 'diff' that were declared as int (32-bit) in the original C code. This prevents integer overflow behavior that was implicitly present in the C code due to 32-bit arithmetic, leading to divergent intermediate values and final results between the C and Rust implementations.": [],
+    "The generated Rust code incorrectly treats C's char (which may be signed) as u8 when converting to numeric values, leading to differing arithmetic results for characters with values above 0x7F. In C, negative char values from extended ASCII are retained, while Rust's unsigned u8 conversion changes their numeric interpretation, causing incorrect digit sums and modulo 11 results that diverge from the original C implementation.": [],
+    "The tool's translation of character array accesses in C generates incorrect pointer dereferences in Rust, leading to attempts to dereference byte values (i8) as pointers. In C, accessing an array element is a single dereference, but the generated Rust code adds an extra dereference operator, causing a compile-error where an i8 is being dereferenced.": [],
+    "The generated Rust code attempts to create fixed-size arrays using dynamically determined sizes (from function parameters), leading to a compile error. Rust requires array sizes to be constants, so variable-length arrays from C must be replaced with dynamically allocated data structures like Vec.": [],
+    "The generated Rust code incorrectly maps C's memset operation on a contiguous 2D array to a non-contiguous Vec<Vec<T>> structure in Rust, while also mishandling pointer types (c_int vs c_void) in FFI calls. This leads to invalid memory layout assumptions and attempts to zero-initialize non-contiguous memory regions with libc::memset, causing alignment violations and null pointer panics in Rust's safety checks.": [],
+    "The generated Rust code uses C's `min` and `max` functions via `libc` or other unsafe implementations, requiring unsafe blocks, instead of Rust's safe `std::cmp::min` and `std::cmp::max`. The tool's translation incorrectly invokes unsafe foreign functions, leading to compile errors where safe standard library functions should be used.": [
+        "MINIMUM_STEPS_TO_DELETE_A_STRING_AFTER_REPEATED_DELETION_OF_PALINDROME_SUBSTRINGS.c",
+        "SPACE_OPTIMIZED_DP_SOLUTION_0_1_KNAPSACK_PROBLEM.c",
+        "HIGHWAY_BILLBOARD_PROBLEM.c",
+        "UNBOUNDED_KNAPSACK_REPETITION_ITEMS_ALLOWED.c",
+        "SPACE_OPTIMIZED_DP_SOLUTION_0_1_KNAPSACK_PROBLEM_1.c",
+        "MAXIMUM_PRODUCT_SUBARRAY_ADDED_NEGATIVE_PRODUCT_CASE.c"
+    ]
+}

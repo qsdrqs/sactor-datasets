@@ -1,0 +1,28 @@
+{
+    "Mishandling of argv parameters in the main function's translation leading to incorrect argument indexing": [
+        "s866334754.c",
+        "s485171693.c",
+        "s720139214.c",
+        "s334361484.c",
+        "s893243612.c"
+    ],
+    "Incorrect handling of mutable global variables between C and Rust semantics": [
+        "s127651425.c",
+        "s107891584.c"
+    ],
+    "Incorrect translation of function names' casing conventions, causing function signature mismatches": [
+        "s627713376.c"
+    ],
+    "Format string translation error causing literal character differences in output": [
+        "s928861682.c",
+        "s910447231.c",
+        "s955232628.c",
+        "s695270122.c"
+    ],
+    "Incorrect seed value handling due to signed/unsigned casting differences between C's implicit conversions and Rust's explicit casts": [
+        "s703625778.c"
+    ],
+    "Incorrect translation of loop control structures causing unintended termination conditions or iteration behavior": [
+        "s092574033.c"
+    ]
+}

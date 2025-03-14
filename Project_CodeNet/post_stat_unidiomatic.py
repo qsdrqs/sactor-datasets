@@ -39,6 +39,7 @@ for dir in translated_dirs:
     if not os.path.exists(f'{translated_dir}/{dir}/unidiomatic_failure_info.json'):
         continue
     if not os.path.exists(f'{translated_dir}/{dir}/translated_code_unidiomatic/combined.rs'):
+        print(f'{dir} has no combined.rs')
         total_fails += 1
         with open(f'{translated_dir}/{dir}/unidiomatic_failure_info.json') as f:
             json_data = json.load(f)

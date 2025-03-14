@@ -1,0 +1,39 @@
+{
+    "Mishandling of argv parameters in the main function's translation leading to incorrect argument indexing": [
+        "s866334754.c",
+        "s016316053.c",
+        "s372799262.c",
+        "s092574033.c"
+    ],
+    "Incorrect handling of mutable global variables between C and Rust semantics": [
+        "s107891584.c",
+        "s127651425.c"
+    ],
+    "Incorrect translation of function names' casing conventions, causing function signature mismatches": [
+        "s627713376.c"
+    ],
+    "Format string translation error causing literal character differences in output": [
+        "s928861682.c",
+        "s246854091.c",
+        "s695270122.c",
+        "s021988116.c",
+        "s237065887.c"
+    ],
+    "Incorrect seed value handling due to signed/unsigned casting differences between C's implicit conversions and Rust's explicit casts": [
+        "s703625778.c"
+    ],
+    "Incorrect memory management of CString pointers leading to invalid frees of stack-allocated buffers": [
+        "s485171693.c",
+        "s910447231.c"
+    ],
+    "Incorrect handling of C standard library types and functions (e.g., c_char, size_t, stderr) when translating to Rust's libc crate and FFI bindings": [
+        "s761899322.c",
+        "s311954657.c",
+        "s324963220.c",
+        "s961979487.c",
+        "s039505497.c"
+    ],
+    "Incorrect handling of loop termination conditions that leads to off-by-one errors in index calculations between C and Rust": [],
+    "Duplication of function definitions during code generation leading to multiple identical function entries": [],
+    "Incorrect type conversion when handling the seed value for srand, leading to different random number sequences between C and Rust": []
+}
