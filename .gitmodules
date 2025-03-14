@@ -1,6 +1,6 @@
 [submodule "avl_tree/avl-tree"]
 	path = avl_tree/avl-tree
-	url = https://github.com/xieqing/avl-tree
+	url = https://github.com/qsdrqs/avl-tree
 [submodule "urlparser/url.h"]
 	path = urlparser/url.h
-	url = https://github.com/jwerle/url.h
+	url = https://github.com/qsdrqs/url.h
