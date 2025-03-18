@@ -56,9 +56,8 @@ Please **make sure** to provide a general reason that can be applied to multiple
 Please provide a reason why the tool generated incorrect Rust code **FUNDAMENTALLY** (NOTE that the reason of first failure is always NOT the fundamental reason).
 '''
     client = openai.Client(
-        api_key = "***REMOVED***",
-        # api_key = "***REMOVED***",
-        base_url = "https://api.fireworks.ai/inference/v1"
+        api_key = "***REMOVED***",  # Replace with your actual API key
+        # base_url = "https://api.deepseek.com",  # Replace with your actual base URL
     )
 
     print_red(prompt)
