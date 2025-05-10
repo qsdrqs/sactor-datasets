@@ -19,7 +19,9 @@ sactor_functional_fails = 0
 success_in_one = 0
 success_in_two = 0
 success_in_three = 0
-success_more_than_three = 0
+success_in_four = 0
+success_in_five = 0
+success_in_six = 0
 
 tests = {}
 with open("./stat.csv") as f:
@@ -86,8 +88,12 @@ for dir in translated_dirs:
             success_in_two += 1
         elif max_len == 2:
             success_in_three += 1
-        else:
-            success_more_than_three += 1
+        elif max_len == 3:
+            success_in_four += 1
+        elif max_len == 4:
+            success_in_five += 1
+        elif max_len == 5:
+            success_in_six += 1
 
 total = success + total_fails
 print(f"Total: {total}")
@@ -99,5 +105,7 @@ print(f"Sactor functional fails: {sactor_functional_fails}")
 print(f"Success in one: {success_in_one}")
 print(f"Success in two: {success_in_two}")
 print(f"Success in three: {success_in_three}")
-print(f"Success more than three: {success_more_than_three}")
+print(f"Success in four: {success_in_four}")
+print(f"Success in five: {success_in_five}")
+print(f"Success in six: {success_in_six}")
 

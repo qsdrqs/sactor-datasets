@@ -16,6 +16,7 @@
         "REMAINDER_7_LARGE_NUMBERS.c"
     ],
     "The generated Rust code does not handle empty input strings, leading to index out-of-bounds panics when accessing the first character. The original C code assumes the input string is always non-empty, causing undefined behavior when empty, but Rust enforces bounds checking and panics when accessing index 0 of an empty slice.": [
+        "MINIMUM_STEPS_TO_DELETE_A_STRING_AFTER_REPEATED_DELETION_OF_PALINDROME_SUBSTRINGS.c",
         "MINIMAL_OPERATIONS_MAKE_NUMBER_MAGICAL.c",
         "COUNT_PALINDROME_SUB_STRINGS_STRING.c",
         "MAXIMUM_SUM_ALTERNATING_SUBSEQUENCE_SUM.c",
@@ -40,7 +41,8 @@
         "FIND_MAXIMUM_DOT_PRODUCT_TWO_ARRAYS_INSERTION_0S.c"
     ],
     "The generated Rust code performs arithmetic operations that can overflow in debug mode when summing three i32::MIN initial values due to invalid input handling (n=0), causing runtime panics. The original C code allows such underflows as undefined behavior, but Rust enforces strict overflow checks in debug builds.": [
-        "MAXIMUM_TRIPLET_SUM_ARRAY_2.c"
+        "MAXIMUM_TRIPLET_SUM_ARRAY_2.c",
+        "MAXIMUM_PRODUCT_SUBARRAY_ADDED_NEGATIVE_PRODUCT_CASE.c"
     ],
     "The generated Rust code does not check if the divisor 'n' is zero before performing modulus operations, leading to a runtime panic. The original C code allows 'n' to be zero resulting in undefined behavior, but Rust's strict runtime checks enforce handling this case, which the translated code neglects.": [
         "NUMBER_SUBSEQUENCES_STRING_DIVISIBLE_N.c"
@@ -61,13 +63,11 @@
     "The generated Rust code incorrectly treats C's char (which may be signed) as u8 when converting to numeric values, leading to differing arithmetic results for characters with values above 0x7F. In C, negative char values from extended ASCII are retained, while Rust's unsigned u8 conversion changes their numeric interpretation, causing incorrect digit sums and modulo 11 results that diverge from the original C implementation.": [],
     "The tool's translation of character array accesses in C generates incorrect pointer dereferences in Rust, leading to attempts to dereference byte values (i8) as pointers. In C, accessing an array element is a single dereference, but the generated Rust code adds an extra dereference operator, causing a compile-error where an i8 is being dereferenced.": [],
     "The generated Rust code attempts to create fixed-size arrays using dynamically determined sizes (from function parameters), leading to a compile error. Rust requires array sizes to be constants, so variable-length arrays from C must be replaced with dynamically allocated data structures like Vec.": [],
-    "The generated Rust code incorrectly maps C's memset operation on a contiguous 2D array to a non-contiguous Vec<Vec<T>> structure in Rust, while also mishandling pointer types (c_int vs c_void) in FFI calls. This leads to invalid memory layout assumptions and attempts to zero-initialize non-contiguous memory regions with libc::memset, causing alignment violations and null pointer panics in Rust's safety checks.": [],
-    "The generated Rust code uses C's `min` and `max` functions via `libc` or other unsafe implementations, requiring unsafe blocks, instead of Rust's safe `std::cmp::min` and `std::cmp::max`. The tool's translation incorrectly invokes unsafe foreign functions, leading to compile errors where safe standard library functions should be used.": [
-        "MINIMUM_STEPS_TO_DELETE_A_STRING_AFTER_REPEATED_DELETION_OF_PALINDROME_SUBSTRINGS.c",
+    "The generated Rust code incorrectly maps C's memset operation on a contiguous 2D array to a non-contiguous Vec<Vec<T>> structure in Rust, while also mishandling pointer types (c_int vs c_void) in FFI calls. This leads to invalid memory layout assumptions and attempts to zero-initialize non-contiguous memory regions with libc::memset, causing alignment violations and null pointer panics in Rust's safety checks.": [
         "SPACE_OPTIMIZED_DP_SOLUTION_0_1_KNAPSACK_PROBLEM.c",
         "HIGHWAY_BILLBOARD_PROBLEM.c",
         "UNBOUNDED_KNAPSACK_REPETITION_ITEMS_ALLOWED.c",
-        "SPACE_OPTIMIZED_DP_SOLUTION_0_1_KNAPSACK_PROBLEM_1.c",
-        "MAXIMUM_PRODUCT_SUBARRAY_ADDED_NEGATIVE_PRODUCT_CASE.c"
-    ]
+        "SPACE_OPTIMIZED_DP_SOLUTION_0_1_KNAPSACK_PROBLEM_1.c"
+    ],
+    "The generated Rust code uses C's `min` and `max` functions via `libc` or other unsafe implementations, requiring unsafe blocks, instead of Rust's safe `std::cmp::min` and `std::cmp::max`. The tool's translation incorrectly invokes unsafe foreign functions, leading to compile errors where safe standard library functions should be used.": []
 }

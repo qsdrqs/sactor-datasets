@@ -46,6 +46,7 @@ for dir in translated_dirs:
             json_data = json.load(f)
 
         if len(json_data.keys()) == 1 and list(json_data.keys())[0] == "error":
+            print(f'{dir} has no errors but no combined.rs')
             sactor_functional_fails += 1
             continue
 

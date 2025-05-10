@@ -47,9 +47,9 @@ def translate(c_code, file, file_path, test_cmd_path, translated_path):
 ```c
 {c_code}
 ```
+Compilable Rust refactoring of above C code, with code only, no comments. Use the same function name, same argument types and return types. Make sure it includes all imports, uses safe rust, and compiles on its own. Give only code, and no main function. Convert i32 types to f32 if necessary. Use mut variables if necessary.
 
-Compilable Rust refactoring of above C code, with code only, no comments. Use the same function name, same argument types and return types. Make sure it includes all imports, uses safe rust, and compiles on its own. Give only code, and no main function. Convert i32 types to f32 if necessary. Use mut variables if necessary. 
-
+Output the translated function into this format (wrap with the following tags):
 You don't need to translate the `main` function, and don't output the `main` function translation in the result.
 `f_gold` and `f_filled` are the same funciton, so only translate `f_gold`, don't translate and output `f_filled` in the result.
 ----CODE----

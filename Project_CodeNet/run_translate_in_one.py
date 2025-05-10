@@ -44,10 +44,11 @@ def translate(c_code, file, file_path, test_cmd_path, translated_path):
 
         llm = sactor.llm
         prompt = f'''
-Translate the following C program in idiomatic Rust. No `unsafe` code is allowed.
 ```c
 {c_code}
 ```
+Compilable Rust refactoring of above C code, with code only, no comments. Use the same function name, same argument types and return types. Make sure it includes all imports, uses safe rust, and compiles on its own. Give only code, and no main function. Convert i32 types to f32 if necessary. Use mut variables if necessary.
+
 Output the translated function into this format (wrap with the following tags):
 ----CODE----
 ```rust
@@ -66,7 +67,7 @@ Output the translated function into this format (wrap with the following tags):
         os.makedirs(translated_path, exist_ok=True)
         result = sactor.combiner.verifier.e2e_verify(code)
         if result[0] == VerifyResult.SUCCESS:
-            with open(os.path.join(translated_path, 'translated.rs'), 'w') as f:
+            with open(os.path.join(translated_path, 'lib.rs'), 'w') as f:
                 f.write(code)
             return True
         else:
@@ -103,7 +104,9 @@ for file in files:
             success_count += 1
             break
         else:
-            failed_count += 1
+            if attempt == MAX_ATTEMPTS - 1:
+                failed_count += 1
+                print(f'Failed to translate {file} after {MAX_ATTEMPTS} attempts')
 
     print("Success count: ", success_count)
     print("Failed count: ", failed_count)

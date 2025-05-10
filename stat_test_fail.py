@@ -56,18 +56,18 @@ Please **make sure** to provide a general reason that can be applied to multiple
 Please provide a reason why the tool generated incorrect Rust code **FUNDAMENTALLY** (NOTE that the reason of first failure is always NOT the fundamental reason).
 '''
     client = openai.Client(
-        api_key = "***REMOVED***",  # Replace with your actual API key
-        # base_url = "https://api.deepseek.com",  # Replace with your actual base URL
+        api_key = os.environ.get('DEEPSEEK_API_KEY'),
+        base_url = "https://api.deepseek.com",  # Replace with your actual base URL
     )
 
     print_red(prompt)
     response = client.chat.completions.create(
-        model = "accounts/fireworks/models/deepseek-r1",
+        model = "deepseek-reasoner",
         messages=[
             {"role": "system", "content": "You are a software engineer who is analyzing a bug in a code translation tool."},
             {"role": "user", "content": prompt},
         ],
-        max_tokens=16384,
+        # max_tokens=16384,
     )
 
     resp_text = response.choices[0].message.content

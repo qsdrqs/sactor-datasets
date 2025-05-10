@@ -40,6 +40,9 @@ for dir in translated_dirs:
         total_fails += 1
         with open(f'{translated_target}/{dir}/unidio_failure_info.json') as f:
             json_data = json.load(f)
+        if 'f_filled' not in json_data:
+            print(f"f_filled not in json_data: {dir}")
+            continue
         error_list = json_data['f_filled']['errors']
 
         if error_list[-1]['type'] == "TEST_ERROR":
