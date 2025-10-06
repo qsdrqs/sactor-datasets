@@ -5,3 +5,5 @@
 - [Project-CodeNet-dataset](https://developer.ibm.com/data/project-codenet/)
 - [AVL-tree](https://github.com/xieqing/avl-tree)
 - [urlparser](https://github.com/jwerle/url.h)
+- [CRust-Bench](https://github.com/anirudhkhatry/CRUST-bench)
+- [libogg](https://github.com/xiph/ogg)
