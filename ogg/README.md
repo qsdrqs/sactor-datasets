@@ -29,6 +29,10 @@ Directory `./ogg` downloaded from [Github:xiph/ogg](https://github.com/xiph/ogg)
 
     Note: The -a argument should be verbatim from your `make build` output for compiling and linking the respective C source file. 
 
+# Translation
+
+Directory `./translation` is the Rust code translated to by SACTOR.
+
 # Generate coverage info
 
 ```bash

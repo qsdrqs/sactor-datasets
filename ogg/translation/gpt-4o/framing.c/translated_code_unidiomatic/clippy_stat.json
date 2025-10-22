@@ -1,0 +1,15 @@
+{
+    "total_warnings": 53,
+    "total_errors": 0,
+    "warnings": {
+        "unused_variables": 1,
+        "unused_assignments": 1,
+        "clippy::legacy_numeric_constants": 3,
+        "clippy::missing_safety_doc": 40,
+        "clippy::needless_late_init": 3,
+        "clippy::manual_c_str_literals": 2,
+        "clippy::nonminimal_bool": 2,
+        "non_upper_case_globals": 1
+    },
+    "errors": {}
+}
