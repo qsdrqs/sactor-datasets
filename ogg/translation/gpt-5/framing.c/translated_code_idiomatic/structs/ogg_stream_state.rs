@@ -1,0 +1,21 @@
+#[derive(Debug)]
+pub struct OggStreamState<'a> {
+    pub body_data: &'a mut [u8],
+    pub lacing_vals: &'a mut [i32],
+    pub granule_vals: &'a mut [i64],
+    pub body_storage: usize,
+    pub body_fill: usize,
+    pub body_returned: usize,
+    pub lacing_storage: usize,
+    pub lacing_fill: usize,
+    pub lacing_packet: usize,
+    pub lacing_returned: usize,
+    pub header: [u8; 282],
+    pub header_fill: usize,
+    pub e_o_s: bool,
+    pub b_o_s: bool,
+    pub serialno: u32,
+    pub pageno: u32,
+    pub packetno: i64,
+    pub granulepos: i64,
+}

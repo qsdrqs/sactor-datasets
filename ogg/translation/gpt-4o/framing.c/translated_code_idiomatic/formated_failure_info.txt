@@ -1,0 +1,593 @@
+===========================================================
+--------------------------
+function name: _packetout
+
+--------------------------
+error type: COMPILE_ERROR
+
+--------------------------
+translation:
+pub fn _packetout<'a>(
+    os: &mut OggStreamState<'a>,
+    op: Option<&mut OggPacket<'a>>,
+    adv: i32,
+) -> i32 {
+    let mut ptr = os.lacing_returned as usize;
+    if os.lacing_packet <= ptr as i64 {
+        return 0;
+    }
+    if os.lacing_vals[ptr] & 0x400 != 0 {
+        os.lacing_returned += 1;
+        os.packetno += 1;
+        return -1;
+    }
+    if op.is_none() && adv == 0 {
+        return 1;
+    }
+    let mut size = os.lacing_vals[ptr] & 0xff;
+    let mut bytes = size as i64;
+    let mut eos = os.lacing_vals[ptr] & 0x200;
+    let bos = os.lacing_vals[ptr] & 0x100;
+    while size == 255 {
+        ptr += 1;
+        let val = os.lacing_vals[ptr];
+        size = val & 0xff;
+        if val & 0x200 != 0 {
+            eos = 0x200;
+        }
+        bytes += size as i64;
+    }
+    if let Some(op) = op {
+        op.e_o_s = eos as i64;
+        op.b_o_s = bos as i64;
+        op.packet = &os
+            .body_data[os.body_returned as usize..(os.body_returned + bytes) as usize];
+        op.packetno = os.packetno;
+        op.granulepos = os.granule_vals[ptr];
+        op.bytes = bytes;
+    }
+    if adv != 0 {
+        os.body_returned += bytes;
+        os.lacing_returned = ptr as i64 + 1;
+        os.packetno += 1;
+    }
+    1
+}
+
+
+--------------------------
+message:
+    Updating crates.io index
+     Locking 1 package to latest compatible version
+   Compiling libc v0.2.176
+   Compiling build_attempt v0.1.0 (/tmp/sactor/tmp7x9znrk_/build/build_attempt)
+error[E0621]: explicit lifetime required in the type of `os`
+  --> src/lib.rs:73:17
+   |
+73 |     if let Some(op) = op {
+   |                 ^^ lifetime `'a` required
+   |
+help: add explicit lifetime `'a` to the type of `os`
+   |
+44 |     os: &'a mut OggStreamState<'a>,
+   |          ++
+
+For more information about this error, try `rustc --explain E0621`.
+error: could not compile `build_attempt` (lib) due to 1 previous error
+
+
+
+===========================================================
+--------------------------
+function name: _os_lacing_expand
+
+--------------------------
+error type: COMPILE_ERROR
+
+--------------------------
+translation:
+pub fn _os_lacing_expand(os: &mut OggStreamState, needed: i64) -> i32 {
+    fn resize_slice<T: Default + Clone>(slice: &mut &mut [T], new_size: usize) {
+        let mut vec = slice.to_vec();
+        if vec.len() < new_size {
+            vec.resize(new_size, T::default());
+        }
+        *slice = vec.as_mut_slice();
+    }
+    if os.lacing_storage - needed <= os.lacing_fill {
+        if os.lacing_storage > i64::MAX - needed {
+            ogg_stream_clear(Some(os));
+            return -1;
+        }
+        let mut lacing_storage = os.lacing_storage + needed;
+        if lacing_storage < i64::MAX - 32 {
+            lacing_storage += 32;
+        }
+        let new_size = lacing_storage as usize;
+        resize_slice(&mut os.lacing_vals, new_size);
+        resize_slice(&mut os.granule_vals, new_size);
+        os.lacing_storage = lacing_storage;
+    }
+    0
+}
+
+
+--------------------------
+message:
+    Updating crates.io index
+     Locking 1 package to latest compatible version
+   Compiling libc v0.2.176
+   Compiling build_attempt v0.1.0 (/tmp/sactor/tmp7x9znrk_/build/build_attempt)
+error[E0597]: `vec` does not live long enough
+  --> src/lib.rs:56:18
+   |
+51 |     fn resize_slice<T: Default + Clone>(slice: &mut &mut [T], new_size: usize) {
+   |                                                     - let's call the lifetime of this reference `'1`
+52 |         let mut vec = slice.to_vec();
+   |             ------- binding `vec` declared here
+...
+56 |         *slice = vec.as_mut_slice();
+   |         ---------^^^---------------
+   |         |        |
+   |         |        borrowed value does not live long enough
+   |         assignment requires that `vec` is borrowed for `'1`
+57 |     }
+   |     - `vec` dropped here while still borrowed
+
+For more information about this error, try `rustc --explain E0597`.
+error: could not compile `build_attempt` (lib) due to 1 previous error
+
+
+
+===========================================================
+--------------------------
+function name: ogg_page_checksum_set
+
+--------------------------
+error type: COMPILE_ERROR
+
+--------------------------
+translation:
+pub fn ogg_page_checksum_set(og: Option<&mut OggPage>) {
+    if let Some(og) = og {
+        let mut crc_reg: u32 = 0;
+        if let Cow::Borrowed(header) = &mut og.header {
+            header[22..26].fill(0);
+            crc_reg = _os_update_crc(crc_reg, header);
+            crc_reg = _os_update_crc(crc_reg, og.body);
+            header[22] = (crc_reg & 0xff) as u8;
+            header[23] = ((crc_reg >> 8) & 0xff) as u8;
+            header[24] = ((crc_reg >> 16) & 0xff) as u8;
+            header[25] = ((crc_reg >> 24) & 0xff) as u8;
+        }
+    }
+}
+
+
+--------------------------
+message:
+    Updating crates.io index
+     Locking 1 package to latest compatible version
+   Compiling libc v0.2.176
+   Compiling build_attempt v0.1.0 (/tmp/sactor/tmp7x9znrk_/build/build_attempt)
+error[E0596]: cannot borrow `**header` as mutable, as it is behind a `&` reference
+    --> src/lib.rs:2111:13
+     |
+2111 |             header[22..26].fill(0);
+     |             ^^^^^^ cannot borrow as mutable
+
+error[E0594]: cannot assign to `header[_]`, which is behind a `&` reference
+    --> src/lib.rs:2114:13
+     |
+2114 |             header[22] = (crc_reg & 0xff) as u8;
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ cannot assign
+
+error[E0594]: cannot assign to `header[_]`, which is behind a `&` reference
+    --> src/lib.rs:2115:13
+     |
+2115 |             header[23] = ((crc_reg >> 8) & 0xff) as u8;
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ cannot assign
+
+error[E0594]: cannot assign to `header[_]`, which is behind a `&` reference
+    --> src/lib.rs:2116:13
+     |
+2116 |             header[24] = ((crc_reg >> 16) & 0xff) as u8;
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ cannot assign
+
+error[E0594]: cannot assign to `header[_]`, which is behind a `&` reference
+    --> src/lib.rs:2117:13
+     |
+2117 |             header[25] = ((crc_reg >> 24) & 0xff) as u8;
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ cannot assign
+
+Some errors have detailed explanations: E0594, E0596.
+For more information about an error, try `rustc --explain E0594`.
+error: could not compile `build_attempt` (lib) due to 5 previous errors
+
+
+
+===========================================================
+--------------------------
+function name: ogg_sync_buffer
+
+--------------------------
+error type: COMPILE_ERROR
+
+--------------------------
+translation:
+pub fn ogg_sync_buffer<'a>(
+    oy: &'a mut OggSyncState<'a>,
+    size: i64,
+) -> Option<&'a mut [u8]> {
+    if ogg_sync_check(oy) != 0 {
+        return None;
+    }
+    if oy.returned != 0 {
+        oy.fill -= oy.returned;
+        if oy.fill > 0 {
+            oy.data
+                .copy_within(
+                    oy.returned as usize..oy.fill as usize + oy.returned as usize,
+                    0,
+                );
+        }
+        oy.returned = 0;
+    }
+    if size > oy.storage as i64 - oy.fill as i64 {
+        if size > (i32::MAX - 4096 - oy.fill) as i64 {
+            ogg_sync_clear(oy);
+            return None;
+        }
+        let newsize = size + oy.fill as i64 + 4096;
+        let mut new_data = vec![0u8; newsize as usize];
+        new_data[..oy.fill as usize].copy_from_slice(&oy.data[..oy.fill as usize]);
+        oy.data = Box::leak(new_data.into_boxed_slice());
+        oy.storage = newsize as i32;
+    }
+    Some(&mut oy.data[oy.fill as usize..oy.storage as usize])
+}
+
+
+--------------------------
+message:
+Failed to compile Rust code for function ogg_sync_buffer. Error messages from the Rust compiler:
+    Updating crates.io index
+     Locking 6 packages to latest compatible versions
+   Compiling proc-macro2 v1.0.101
+   Compiling unicode-ident v1.0.19
+   Compiling syn v1.0.109
+   Compiling libc v0.2.176
+   Compiling quote v1.0.40
+   Compiling sactor_proc_macros v0.1.0 (/tmp/sactor/tmp7x9znrk_/build/embed_test_rust/sactor_proc_macros)
+   Compiling ogg_sync_buffer v0.1.0 (/tmp/sactor/tmp7x9znrk_/build/embed_test_rust)
+error: captured variable cannot escape `FnMut` closure body
+   --> src/lib.rs:110:5
+    |
+80  | #[sactor_proc_macros::trace_fn]
+    |                               - inferred to be a `FnMut` closure
+...
+110 |     Some(&mut oy.data[oy.fill as usize..oy.storage as usize])
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ returns a reference to a captured variable which escapes the closure body
+    |
+    = note: `FnMut` closures only have access to their captured variables while they are executing...
+    = note: ...therefore, they cannot allow references to captured variables to escape
+
+error[E0501]: cannot borrow `oy` as immutable because previous closure requires unique access
+  --> src/lib.rs:82:5
+   |
+80 | #[sactor_proc_macros::trace_fn]
+   | -------------------------------
+   | |
+   | closure construction occurs here
+   | returning this value requires that `*oy` is borrowed for `'a`
+   | in this procedural macro expansion
+81 | pub fn ogg_sync_buffer_idiomatic<'a>(
+   |                                  -- lifetime `'a` defined here
+82 |     oy: &'a mut OggSyncState<'a>,
+   |     ^^ second borrow occurs here
+...
+85 |     if ogg_sync_check(oy) != 0 {
+   |                       -- first borrow occurs due to use of `*oy` in closure
+...
+89 |         oy.fill -= oy.returned;
+   |         ------- capture is mutable because of use here
+   |
+   = note: this error originates in the macro `$crate::format_args_nl` which comes from the expansion of the attribute macro `sactor_proc_macros::trace_fn` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+For more information about this error, try `rustc --explain E0501`.
+error: could not compile `ogg_sync_buffer` (lib) due to 2 previous errors
+
+
+
+===========================================================
+--------------------------
+function name: ogg_sync_reset
+
+--------------------------
+error type: TEST_ERROR
+
+--------------------------
+translation:
+pub fn ogg_sync_reset(oy: &mut OggSyncState) -> i32 {
+    if ogg_sync_check(oy) != 0 {
+        return -1;
+    }
+    oy.fill = 0;
+    oy.returned = 0;
+    oy.unsynced = 0;
+    oy.headerbytes = 0;
+    oy.bodybytes = 0;
+    0
+}
+
+
+--------------------------
+message:
+
+--------Begin Original Output--------
+testing single page encoding... 0, 
+--------End Original Output--------
+--------Begin Feedback--------
+--------Entering function: ogg_sync_reset_idiomatic-------
+Argument oy = OggSyncState { data: [], storage: 0, fill: 0, returned: 0, unsynced: 0, headerbytes: 0, bodybytes: 0 }
+--------Exiting function: ogg_sync_reset_idiomatic--------
+Return value = 0
+Mutable variable oy = OggSyncState { data: [], storage: 0, fill: 0, returned: 0, unsynced: 0, headerbytes: 0, bodybytes: 0 }
+----------------------------------------------------------
+==15166== Memcheck, a memory error detector
+==15166== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==15166== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==15166== Command: /tmp/sactor/tmp7x9znrk_/build/embed_test_c/ogg_sync_reset
+==15166== 
+testing single page encoding... 0, ==15166== Invalid free() / delete / delete[] / realloc()
+==15166==    at 0x484BA20: realloc (vg_replace_malloc.c:1649)
+==15166==    by 0x10A094: ogg_sync_buffer (ogg_sync_reset.c:1040)
+==15166==    by 0x10B01A: test_pack (test_framing.c:603)
+==15166==    by 0x10B672: main (test_framing.c:728)
+==15166==  Address 0x1 is not stack'd, malloc'd or (recently) free'd
+==15166== 
+==15166== Invalid free() / delete / delete[] / realloc()
+==15166==    at 0x484928C: free (vg_replace_malloc.c:974)
+==15166==    by 0x109FD2: ogg_sync_clear (ogg_sync_reset.c:1005)
+==15166==    by 0x10A0E9: ogg_sync_buffer (ogg_sync_reset.c:1044)
+==15166==    by 0x10B01A: test_pack (test_framing.c:603)
+==15166==    by 0x10B672: main (test_framing.c:728)
+==15166==  Address 0x1 is not stack'd, malloc'd or (recently) free'd
+==15166== 
+==15166== Invalid write of size 8
+==15166==    at 0x4850960: memmove (vg_replace_strmem.c:1400)
+==15166==    by 0x10B0A5: memcpy (string_fortified.h:29)
+==15166==    by 0x10B0A5: test_pack (test_framing.c:607)
+==15166==    by 0x10B672: main (test_framing.c:728)
+==15166==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==15166== 
+==15166== 
+==15166== Process terminating with default action of signal 11 (SIGSEGV)
+==15166==  Access not within mapped region at address 0x0
+==15166==    at 0x4850960: memmove (vg_replace_strmem.c:1400)
+==15166==    by 0x10B0A5: memcpy (string_fortified.h:29)
+==15166==    by 0x10B0A5: test_pack (test_framing.c:607)
+==15166==    by 0x10B672: main (test_framing.c:728)
+==15166==  If you believe this happened as a result of a stack
+==15166==  overflow in your program's main thread (unlikely but
+==15166==  possible), you can try to increase the size of the
+==15166==  main thread stack using the --main-stacksize= flag.
+==15166==  The main thread stack size used in this run was 8388608.
+==15166== 
+==15166== HEAP SUMMARY:
+==15166==     in use at exit: 1,107,016 bytes in 10 blocks
+==15166==   total heap usage: 12 allocs, 3 frees, 1,111,215 bytes allocated
+==15166== 
+==15166== For a detailed leak analysis, rerun with: --leak-check=full
+==15166== 
+==15166== For lists of detected and suppressed errors, rerun with: -s
+==15166== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
+
+
+--------End Feedback--------
+
+
+===========================================================
+--------------------------
+function name: ogg_stream_packetout
+
+--------------------------
+error type: DEPENDENCY_ERROR
+
+--------------------------
+translation:
+
+
+--------------------------
+message:
+Not all dependencies are translated. Function dependencies are: [FunctionInfo(int ogg_stream_check ( struct ogg_stream_state * os )), FunctionInfo(static int _packetout ( struct ogg_stream_state * os , struct ogg_packet * op , int adv ))]
+Struct dependencies are: [StructInfo(ogg_stream_state), StructInfo(ogg_packet)]
+
+
+===========================================================
+--------------------------
+function name: ogg_stream_packetpeek
+
+--------------------------
+error type: DEPENDENCY_ERROR
+
+--------------------------
+translation:
+
+
+--------------------------
+message:
+Not all dependencies are translated. Function dependencies are: [FunctionInfo(int ogg_stream_check ( struct ogg_stream_state * os )), FunctionInfo(static int _packetout ( struct ogg_stream_state * os , struct ogg_packet * op , int adv ))]
+Struct dependencies are: [StructInfo(ogg_stream_state), StructInfo(ogg_packet)]
+
+
+===========================================================
+--------------------------
+function name: ogg_stream_iovecin
+
+--------------------------
+error type: DEPENDENCY_ERROR
+
+--------------------------
+translation:
+
+
+--------------------------
+message:
+Not all dependencies are translated. Function dependencies are: [FunctionInfo(int ogg_stream_check ( struct ogg_stream_state * os )), FunctionInfo(static int _os_body_expand ( struct ogg_stream_state * os , long needed )), FunctionInfo(static int _os_lacing_expand ( struct ogg_stream_state * os , long needed ))]
+Struct dependencies are: [StructInfo(ogg_iovec_t), StructInfo(ogg_stream_state)]
+
+
+===========================================================
+--------------------------
+function name: ogg_stream_flush_i
+
+--------------------------
+error type: DEPENDENCY_ERROR
+
+--------------------------
+translation:
+
+
+--------------------------
+message:
+Not all dependencies are translated. Function dependencies are: [FunctionInfo(int ogg_stream_check ( struct ogg_stream_state * os )), FunctionInfo(void ogg_page_checksum_set ( struct ogg_page * og ))]
+Struct dependencies are: [StructInfo(ogg_page), StructInfo(ogg_stream_state)]
+
+
+===========================================================
+--------------------------
+function name: ogg_sync_pageseek
+
+--------------------------
+error type: DEPENDENCY_ERROR
+
+--------------------------
+translation:
+
+
+--------------------------
+message:
+Not all dependencies are translated. Function dependencies are: [FunctionInfo(int ogg_sync_check ( struct ogg_sync_state * oy )), FunctionInfo(void ogg_page_checksum_set ( struct ogg_page * og ))]
+Struct dependencies are: [StructInfo(ogg_page), StructInfo(ogg_sync_state)]
+
+
+===========================================================
+--------------------------
+function name: ogg_stream_pagein
+
+--------------------------
+error type: DEPENDENCY_ERROR
+
+--------------------------
+translation:
+
+
+--------------------------
+message:
+Not all dependencies are translated. Function dependencies are: [FunctionInfo(int ogg_stream_check ( struct ogg_stream_state * os )), FunctionInfo(static int _os_lacing_expand ( struct ogg_stream_state * os , long needed )), FunctionInfo(int ogg_page_version ( const struct ogg_page * og )), FunctionInfo(int ogg_page_eos ( const struct ogg_page * og )), FunctionInfo(long ogg_page_pageno ( const struct ogg_page * og )), FunctionInfo(int ogg_page_bos ( const struct ogg_page * og )), FunctionInfo(int ogg_page_serialno ( const struct ogg_page * og )), FunctionInfo(long ogg_page_granulepos ( const struct ogg_page * og )), FunctionInfo(static int _os_body_expand ( struct ogg_stream_state * os , long needed )), FunctionInfo(int ogg_page_continued ( const struct ogg_page * og ))]
+Struct dependencies are: [StructInfo(ogg_page), StructInfo(ogg_stream_state)]
+
+
+===========================================================
+--------------------------
+function name: ogg_stream_packetin
+
+--------------------------
+error type: DEPENDENCY_ERROR
+
+--------------------------
+translation:
+
+
+--------------------------
+message:
+Not all dependencies are translated. Function dependencies are: [FunctionInfo(int ogg_stream_iovecin ( struct ogg_stream_state * os , struct ogg_iovec_t * iov , int count , long e_o_s , long granulepos ))]
+Struct dependencies are: [StructInfo(ogg_iovec_t), StructInfo(ogg_stream_state), StructInfo(ogg_packet)]
+
+
+===========================================================
+--------------------------
+function name: ogg_stream_flush
+
+--------------------------
+error type: DEPENDENCY_ERROR
+
+--------------------------
+translation:
+
+
+--------------------------
+message:
+Not all dependencies are translated. Function dependencies are: [FunctionInfo(static int ogg_stream_flush_i ( struct ogg_stream_state * os , struct ogg_page * og , int force , int nfill ))]
+Struct dependencies are: [StructInfo(ogg_page), StructInfo(ogg_stream_state)]
+
+
+===========================================================
+--------------------------
+function name: ogg_stream_flush_fill
+
+--------------------------
+error type: DEPENDENCY_ERROR
+
+--------------------------
+translation:
+
+
+--------------------------
+message:
+Not all dependencies are translated. Function dependencies are: [FunctionInfo(static int ogg_stream_flush_i ( struct ogg_stream_state * os , struct ogg_page * og , int force , int nfill ))]
+Struct dependencies are: [StructInfo(ogg_page), StructInfo(ogg_stream_state)]
+
+
+===========================================================
+--------------------------
+function name: ogg_stream_pageout
+
+--------------------------
+error type: DEPENDENCY_ERROR
+
+--------------------------
+translation:
+
+
+--------------------------
+message:
+Not all dependencies are translated. Function dependencies are: [FunctionInfo(int ogg_stream_check ( struct ogg_stream_state * os )), FunctionInfo(static int ogg_stream_flush_i ( struct ogg_stream_state * os , struct ogg_page * og , int force , int nfill ))]
+Struct dependencies are: [StructInfo(ogg_page), StructInfo(ogg_stream_state)]
+
+
+===========================================================
+--------------------------
+function name: ogg_stream_pageout_fill
+
+--------------------------
+error type: DEPENDENCY_ERROR
+
+--------------------------
+translation:
+
+
+--------------------------
+message:
+Not all dependencies are translated. Function dependencies are: [FunctionInfo(int ogg_stream_check ( struct ogg_stream_state * os )), FunctionInfo(static int ogg_stream_flush_i ( struct ogg_stream_state * os , struct ogg_page * og , int force , int nfill ))]
+Struct dependencies are: [StructInfo(ogg_page), StructInfo(ogg_stream_state)]
+
+
+===========================================================
+--------------------------
+function name: ogg_sync_pageout
+
+--------------------------
+error type: DEPENDENCY_ERROR
+
+--------------------------
+translation:
+
+
+--------------------------
+message:
+Not all dependencies are translated. Function dependencies are: [FunctionInfo(long ogg_sync_pageseek ( struct ogg_sync_state * oy , struct ogg_page * og )), FunctionInfo(int ogg_sync_check ( struct ogg_sync_state * oy ))]
+Struct dependencies are: [StructInfo(ogg_page), StructInfo(ogg_sync_state)]
+
+

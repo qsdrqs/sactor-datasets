@@ -1,0 +1,14 @@
+{
+    "total_warnings": 58,
+    "total_errors": 1,
+    "warnings": {
+        "clippy::legacy_numeric_constants": 1,
+        "clippy::missing_safety_doc": 36,
+        "clippy::needless_late_init": 1,
+        "non_upper_case_globals": 2,
+        "non_snake_case": 18
+    },
+    "errors": {
+        "clippy::not_unsafe_ptr_arg_deref": 1
+    }
+}
